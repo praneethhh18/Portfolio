@@ -45,23 +45,13 @@ export default function Hero() {
 
   return (
     <section id="home" className="relative h-screen w-full flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-card to-background opacity-80" />
+      <div className="absolute inset-0 bg-gradient-to-br from-background to-card" />
       <motion.div 
-        className="absolute inset-0 opacity-10"
+        className="absolute inset-0"
         style={{
-            backgroundImage: 'radial-gradient(hsl(var(--primary) / 0.1) 1px, transparent 1px)',
-            backgroundSize: '20px 20px',
+            backgroundImage: 'radial-gradient(ellipse 80% 50% at 50% -20%, hsl(var(--primary) / 0.1), transparent), linear-gradient(to right, hsl(var(--background)), hsl(var(--card)), hsl(var(--background)))',
         }}
-        animate={{
-            backgroundPosition: ['0% 0%', '20px 20px'],
-        }}
-        transition={{
-            duration: 5,
-            ease: 'linear',
-            repeat: Infinity,
-            repeatType: 'loop'
-        }}
-      />
+       />
       
       <motion.div
         style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
