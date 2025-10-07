@@ -2,7 +2,7 @@
 
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import Image from "next/image";
-import { ArrowRight, BrainCircuit, Code, Database } from "lucide-react";
+import { ArrowRight, BrainCircuit, Code, DraftingCompass } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { cn } from "@/lib/utils";
@@ -85,7 +85,7 @@ export default function Hero() {
           style={{ transform: "translateZ(40px)" }}
           className="mt-4 text-lg md:text-xl max-w-2xl text-foreground/80"
         >
-          AI & ML Enthusiast | Researcher | Vibe Coder
+          AI Architect | Digital Artisan | Solutions Developer
         </motion.p>
         <motion.div
           style={{ transform: "translateZ(30px)" }}
@@ -106,7 +106,7 @@ export default function Hero() {
       <motion.div style={{ transformStyle: "preserve-3d" }} className="absolute inset-0">
           <FloatingIcon icon={BrainCircuit} className="top-[10%] left-[15%]" delay={0.3} />
           <FloatingIcon icon={Code} className="bottom-[15%] right-[10%]" delay={0.5} />
-          <FloatingIcon icon={Database} className="top-[20%] right-[20%]" delay={0.7} />
+          <FloatingIcon icon={DraftingCompass} className="top-[20%] right-[20%]" delay={0.7} />
           <FloatingIcon icon={BrainCircuit} className="bottom-[25%] left-[25%]" delay={0.4} />
       </motion.div>
     </section>

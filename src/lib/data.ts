@@ -12,7 +12,8 @@ import {
   Smartphone,
   Trello,
   Briefcase,
-  GraduationCap
+  GraduationCap,
+  DraftingCompass
 } from "lucide-react";
 
 import { WhatsAppIcon } from "@/components/icons";
@@ -57,28 +58,28 @@ export const PROJECTS = [
 
 export const SKILLS = {
   "AI & ML": [
-    { name: "TensorFlow", icon: BrainCircuit, description: "End-to-end open source platform for machine learning." },
-    { name: "Scikit-learn", icon: BrainCircuit, description: "Machine learning library for Python." },
-    { name: "AI Agents", icon: BrainCircuit, description: "Developing autonomous AI agents for various tasks." },
-    { name: "GenAI APIs", icon: BrainCircuit, description: "Utilizing generative AI APIs for creative solutions." },
+    { name: "TensorFlow", icon: BrainCircuit, description: "Building and training production-grade neural networks and machine learning models." },
+    { name: "Scikit-learn", icon: BrainCircuit, description: "Applying classical machine learning algorithms for data analysis and predictive modeling." },
+    { name: "AI Agents", icon: BrainCircuit, description: "Architecting autonomous agents that reason, plan, and execute complex tasks." },
+    { name: "GenAI APIs", icon: BrainCircuit, description: "Integrating and fine-tuning large language models for novel applications." },
   ],
   "Programming": [
-    { name: "Python", icon: Code, description: "Versatile language for web development, data science, and more." },
-    { name: "TypeScript", icon: Code, description: "Statically typed superset of JavaScript." },
-    { name: "React", icon: Code, description: "A JavaScript library for building user interfaces." },
-    { name: "Next.js", icon: Code, description: "The React framework for production." },
-    { name: "Flutter", icon: Smartphone, description: "UI toolkit for building natively compiled applications for mobile, web, and desktop." },
+    { name: "Python", icon: Code, description: "Crafting robust backend systems, data pipelines, and AI-powered services." },
+    { name: "TypeScript", icon: Code, description: "Developing scalable and maintainable web applications with type safety." },
+    { name: "React", icon: Code, description: "Building dynamic, component-based user interfaces with a focus on performance." },
+    { name: "Next.js", icon: Code, description: "Leveraging server-side rendering and static generation for optimal web experiences." },
+    { name: "Flutter", icon: Smartphone, description: "Creating cross-platform mobile applications with a beautiful and native feel." },
   ],
   "Data & Cloud": [
-    { name: "MongoDB", icon: Database, description: "NoSQL database for modern applications." },
-    { name: "Data Science", icon: Database, description: "Extracting insights and knowledge from data." },
-    { name: "Google Cloud", icon: Server, description: "Cloud computing services by Google." },
+    { name: "MongoDB", icon: Database, description: "Designing and managing flexible, high-performance NoSQL database schemas." },
+    { name: "Data Science", icon: Database, description: "Transforming raw data into actionable insights through statistical analysis and visualization." },
+    { name: "Google Cloud", icon: Server, description: "Deploying and scaling applications on a secure and reliable cloud infrastructure." },
   ],
   "Tools": [
-    { name: "GitHub", icon: Github, description: "Version control and collaboration platform." },
-    { name: "VS Code", icon: Code, description: "A lightweight but powerful source code editor." },
-    { name: "Prompt Engineering", icon: PencilRuler, description: "Crafting effective prompts for AI models." },
-    { name: "Trello", icon: Trello, description: "Collaboration tool that organizes your projects into boards." },
+    { name: "GitHub", icon: Github, description: "Managing complex codebases and collaborating effectively with distributed teams." },
+    { name: "VS Code", icon: Code, description: "Optimizing development workflows with a highly customized and efficient code editor." },
+    { name: "Prompt Engineering", icon: PencilRuler, description: "Mastering the art of instructing AI models to achieve precise and creative outcomes." },
+    { name: "Trello", icon: Trello, description: "Orchestrating project timelines and deliverables with agile methodologies." },
   ],
 };
 
@@ -116,19 +117,19 @@ export const CERTIFICATIONS = [
 
 export const SERVICES = [
   {
-    title: "AI & ML Development",
-    description: "Building intelligent models and systems to solve complex problems.",
+    title: "AI Systems Architecture",
+    description: "Designing and implementing scalable, end-to-end AI solutions from concept to deployment.",
     icon: BrainCircuit,
   },
   {
-    title: "Web Development",
-    description: "Creating responsive, high-performance websites and web applications.",
+    title: "Full-Stack Development",
+    description: "Crafting seamless digital experiences with expertise in both frontend and backend technologies.",
     icon: Code,
   },
   {
-    title: "UI/UX Design",
-    description: "Designing intuitive and engaging user experiences with a clean aesthetic.",
-    icon: PencilRuler,
+    title: "Creative Technology",
+    description: "Blending design and engineering to build innovative and interactive user-centric applications.",
+    icon: DraftingCompass,
   },
 ];
 

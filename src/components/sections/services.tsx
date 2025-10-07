@@ -38,10 +38,10 @@ export default function Services() {
       >
         <motion.div variants={itemVariants} className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-headline font-bold">
-            Challenges I Love to Take
+            What I Offer
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
-            I love pushing creative boundaries through AI projects, web development, and design challenges.
+            I specialize in architecting intelligent systems, building robust web applications, and creating innovative technology solutions.
           </p>
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
