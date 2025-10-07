@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { cn } from "@/lib/utils";
 
 const NAV_ITEMS = [
   { name: "Home", href: "#home" },
@@ -35,13 +34,13 @@ export default function Header() {
       transition={{ duration: 0.5 }}
       className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-5xl"
     >
-      <div className="flex items-center justify-between h-16 px-6 rounded-2xl bg-card/50 backdrop-blur-lg border border-white/10 shadow-lg">
+      <div className="relative flex items-center justify-between h-16 px-6 rounded-2xl bg-card/50 backdrop-blur-lg border border-white/10 shadow-lg">
         <a href="#home" className="text-lg font-headline font-bold text-primary">
           Praneeth.AI
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-6 absolute left-1/2 -translate-x-1/2">
+        <nav className="hidden md:flex items-center gap-6 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
           {NAV_ITEMS.map((item) => (
             <NavLink key={item.name} href={item.href}>
               {item.name}
