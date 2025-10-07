@@ -4,35 +4,35 @@
 
 @layer base {
   :root {
-    --background: 220 20% 11%; /* #1a1d21 Slate 900 */
+    --background: 222 84% 4%; /* Deep Navy */
     --foreground: 210 40% 98%; /* White */
-    
-    --card: 220 15% 15%; /* #20242a Slate 850 */
+
+    --card: 224 14% 16%; /* Charcoal */
     --card-foreground: 210 40% 98%;
 
-    --popover: 220 20% 11%;
+    --popover: 222 84% 4%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 38 92% 50%; /* #f59e0b Amber 500 */
-    --primary-foreground: 220 20% 11%; /* Slate 900 */
+    --primary: 174 98% 71%; /* Neon Blue */
+    --primary-foreground: 222 84% 4%; /* Deep Navy */
 
-    --secondary: 215 28% 17%; /* #21293a Slate 800 */
+    --secondary: 215 28% 17%;
     --secondary-foreground: 210 40% 98%;
 
     --muted: 215 28% 17%;
     --muted-foreground: 215 20% 65%;
 
-    --accent: 215 28% 17%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 174 98% 71%; /* Neon Blue */
+    --accent-foreground: 222 84% 4%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 215 28% 17%;
     --input: 215 28% 17%;
-    --ring: 38 92% 50%; /* Amber 500 */
+    --ring: 174 98% 71%; /* Neon Blue */
 
-    --chart-1: 38 92% 50%;
+    --chart-1: 174 98% 71%;
     --chart-2: 20 93% 52%;
     --chart-3: 204 70% 40%;
     --chart-4: 174 90% 30%;
@@ -56,8 +56,8 @@
 
 .loader {
   position: relative;
-  width: 64px;
-  height: 64px;
+  width: 160px;
+  height: 160px;
   border: 4px solid #282828;
   overflow: hidden;
   border-radius: 50%;
@@ -70,10 +70,10 @@
 .loader:before {
   content: "";
   position: absolute;
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
+  top: 25px;
+  left: 25px;
+  right: 25px;
+  bottom: 25px;
   z-index: 10;
   background: #212121;
   border-radius: 50%;
@@ -94,7 +94,7 @@
     #fff55e 100%
   );
   filter: blur(20px);
-  z-index: 1;
+  z-index: -1;
   animation: animate 0.5s linear infinite;
 }
 
@@ -106,4 +106,302 @@
   100% {
     transform: rotate(360deg);
   }
+}
+
+.main_back {
+  position: absolute;
+  border-radius: 10px;
+  transform: rotate(90deg);
+  width: 11em;
+  height: 11em;
+  background: linear-gradient(270deg, #03a9f4, #cc39a4, #ffb5d2);
+  z-index: -2;
+  box-shadow: inset 0px 0px 180px 5px #ffffff;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  width: 14em;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+}
+
+.main .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-top-left-radius: 10px;
+  background: lightgrey;
+  transition: 0.4s ease-in-out, 0.2s background-color ease-in-out,
+    0.2s background-image ease-in-out;
+  background: rgba(255, 255, 255, 0.596);
+  backdrop-filter: blur(5px);
+  border: 1px solid transparent;
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.main .card .instagram {
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+  fill: #cc39a4;
+}
+
+.main .card:nth-child(2) {
+  border-radius: 0px;
+}
+
+.main .card:nth-child(2) .twitter {
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+  fill: #03a9f4;
+}
+
+.main .card:nth-child(3) {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 0px;
+}
+
+.main .card:nth-child(3) .dribble {
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+  fill: #ffb5d2;
+}
+
+.main .card:nth-child(4) {
+  border-radius: 0px;
+}
+
+.main .card:nth-child(4) .codepen {
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+  fill: black;
+}
+
+.main .card:nth-child(5) {
+  border-radius: 0px;
+}
+
+.main .card:nth-child(5) .uiverse {
+  position: absolute;
+  margin-left: 0.2em;
+  margin-top: 0.2em;
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+}
+
+.main .card:nth-child(6) {
+  border-radius: 0px;
+}
+
+.main .card:nth-child(6) .discord {
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+  fill: #8c9eff;
+}
+
+.main .card:nth-child(7) {
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 0px;
+}
+
+.main .card:nth-child(7) .github {
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+  fill: black;
+}
+
+.main .card:nth-child(8) {
+  border-radius: 0px;
+}
+
+.main .card:nth-child(8) .telegram {
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+  fill: #29b6f6;
+}
+
+.main .card:nth-child(9) {
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 0px;
+}
+
+.main .card:nth-child(9) .reddit {
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+}
+
+.main:hover {
+  width: 14em;
+  cursor: pointer;
+}
+
+.main:hover .main_back {
+  opacity: 0;
+}
+
+.main:hover .card {
+  margin: 0.2em;
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.main:hover .card:nth-child(5) {
+  border: transparent;
+}
+
+.main:hover .text {
+  opacity: 0;
+  z-index: -3;
+}
+
+.main:hover .instagram {
+  opacity: 1;
+}
+
+.main:hover .twitter {
+  opacity: 1;
+}
+
+.main:hover .dribble {
+  opacity: 1;
+}
+
+.main:hover .codepen {
+  opacity: 1;
+}
+
+.main:hover .uiverse {
+  opacity: 1;
+}
+
+.main:hover .discord {
+  opacity: 1;
+}
+
+.main:hover .github {
+  opacity: 1;
+}
+
+.main:hover .telegram {
+  opacity: 1;
+}
+
+.main:hover .reddit {
+  opacity: 1;
+}
+
+.main .card:nth-child(1):hover {
+  background-color: #cc39a4;
+}
+
+.main .card:nth-child(1):hover .instagram {
+  fill: white;
+}
+
+.main .card:nth-child(2):hover {
+  background-color: #03a9f4;
+}
+
+.main .card:nth-child(2):hover .twitter {
+  fill: white;
+}
+
+.main .card:nth-child(3):hover {
+  background-color: #ffb5d2;
+}
+
+.main .card:nth-child(3):hover .dribble {
+  fill: white;
+}
+
+.main .card:nth-child(4):hover {
+  background-color: #1e1f26;
+}
+
+.main .card:nth-child(4):hover .codepen {
+  fill: white;
+}
+
+.main .card:nth-child(5):hover {
+  animation: backgroundIMG 0.1s;
+  animation-fill-mode: forwards;
+}
+
+.main .card:nth-child(5):hover .uiverse #paint0_linear_501_142_about stop {
+  stop-color: white;
+}
+
+.main .card:nth-child(5):hover .uiverse #paint1_linear_501_142_about stop {
+  stop-color: white;
+}
+
+.main .card:nth-child(5):hover .uiverse #paint2_linear_501_142_about stop {
+  stop-color: white;
+}
+
+@keyframes backgroundIMG {
+  100% {
+    background-image: linear-gradient(#bf66ff, #6248ff, #00ddeb);
+  }
+}
+
+.main .card:nth-child(6):hover {
+  background-color: #8c9eff;
+}
+
+.main .card:nth-child(6):hover .discord {
+  fill: white;
+}
+
+.main .card:nth-child(7):hover {
+  background-color: black;
+}
+
+.main .card:nth-child(7):hover .github {
+  fill: white;
+}
+
+.main .card:nth-child(8):hover {
+  background-color: #29b6f6;
+}
+
+.main .card:nth-child(8):hover .telegram > path:nth-of-type(1) {
+  fill: white;
+}
+
+.main .card:nth-child(8):hover .telegram > path:nth-of-type(2) {
+  fill: #29b6f6;
+}
+
+.main .card:nth-child(8):hover .telegram > path:nth-of-type(3) {
+  fill: #29b6f6;
+}
+
+.main .card:nth-child(9):hover {
+  background-color: rgb(255, 69, 0);
+}
+
+.main .card:nth-child(9) .reddit > g circle {
+  fill: rgb(255, 69, 0);
+}
+
+.main .card:nth-child(9) .reddit > g path {
+  fill: white;
+}
+
+.text {
+  position: absolute;
+  font-size: 0.7em;
+  transition: 0.4s ease-in-out;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 0.33em;
+  z-index: 3;
 }
