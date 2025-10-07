@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { useEffect, useState } from "react";
 import SocialCard from "@/components/ui/social-card";
-import { ShaderGradientBackground } from "../ui/shader-gradient-background";
 
 const profileImage = PlaceHolderImages.find(
   (img) => img.id === "profile-praneeth"
@@ -53,7 +52,6 @@ export default function Hero() {
 
   return (
     <section id="home" className="relative h-screen w-full flex items-center justify-center overflow-hidden">
-      <ShaderGradientBackground />
       <div className="absolute inset-0 bg-background/70 backdrop-blur-sm" />
       
       <motion.div
