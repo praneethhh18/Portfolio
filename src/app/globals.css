@@ -4,39 +4,39 @@
 
 @layer base {
   :root {
-    --background: 225 9% 15%; /* #20232A Charcoal */
-    --foreground: 0 0% 98%; /* Almost white */
+    --background: 220 20% 11%; /* #1a1d21 Slate 900 */
+    --foreground: 210 40% 98%; /* White */
     
-    --card: 228 15% 20%; /* #292D3E Deep Navy */
-    --card-foreground: 0 0% 98%;
+    --card: 220 15% 15%; /* #20242a Slate 850 */
+    --card-foreground: 210 40% 98%;
 
-    --popover: 228 15% 20%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 220 20% 11%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 174 100% 72%; /* #6FFFE9 Neon Blue */
-    --primary-foreground: 225 9% 10%; /* Dark color for text on primary */
+    --primary: 38 92% 50%; /* #f59e0b Amber 500 */
+    --primary-foreground: 220 20% 11%; /* Slate 900 */
 
-    --secondary: 228 15% 25%; /* A bit lighter than card */
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 215 28% 17%; /* #21293a Slate 800 */
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 228 15% 25%;
-    --muted-foreground: 0 0% 63.9%;
+    --muted: 215 28% 17%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 174 100% 72%; /* Neon Blue */
-    --accent-foreground: 225 9% 10%;
+    --accent: 215 28% 17%;
+    --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 228 15% 25%;
-    --input: 228 15% 25%;
-    --ring: 174 100% 72%;
+    --border: 215 28% 17%;
+    --input: 215 28% 17%;
+    --ring: 38 92% 50%; /* Amber 500 */
 
-    --chart-1: 174 100% 72%;
-    --chart-2: 184 90% 60%;
-    --chart-3: 194 80% 50%;
-    --chart-4: 204 70% 40%;
-    --chart-5: 214 60% 30%;
+    --chart-1: 38 92% 50%;
+    --chart-2: 20 93% 52%;
+    --chart-3: 204 70% 40%;
+    --chart-4: 174 90% 30%;
+    --chart-5: 280 80% 60%;
 
     --radius: 0.5rem;
   }
