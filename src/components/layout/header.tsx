@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import ThemeSwitch from "@/components/ui/theme-switch";
 
 const NAV_ITEMS = [
   { name: "Home", href: "#home" },
@@ -48,12 +49,13 @@ export default function Header() {
           ))}
         </nav>
         
-        <div className="hidden md:flex items-center">
-          {/* "Let's Connect" button removed as per request */}
+        <div className="hidden md:flex items-center gap-4">
+          <ThemeSwitch />
         </div>
 
         {/* Mobile Navigation */}
-        <div className="md:hidden">
+        <div className="md:hidden flex items-center gap-2">
+          <ThemeSwitch />
           <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
@@ -85,7 +87,6 @@ export default function Header() {
                   ))}
                 </nav>
                 <div className="mt-auto">
-                  {/* "Let's Connect" button removed as per request */}
                 </div>
               </div>
             </SheetContent>
