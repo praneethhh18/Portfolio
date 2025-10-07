@@ -4,6 +4,7 @@ import About from '@/components/sections/about';
 import Skills from '@/components/sections/skills';
 import Projects from '@/components/sections/projects';
 import Services from '@/components/sections/services';
+import HireMe from '@/components/sections/hire-me';
 import Contact from '@/components/sections/contact';
 import { Chatbot } from '@/components/ui/chatbot';
 
@@ -17,6 +18,7 @@ export default function Home() {
         <Skills />
         <Projects />
         <Services />
+        <HireMe />
         <Contact />
       </main>
       <Chatbot />
