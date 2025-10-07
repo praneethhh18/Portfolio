@@ -72,36 +72,37 @@ export default function Skills() {
                     <div
                       className={cn(
                         "grid grid-cols-3 gap-4",
-                        category === "Tools" && "grid-cols-1"
+                        category === "Tools" && "grid-cols-1 flex flex-col"
                       )}
                     >
-                      {skills.map((skill) => (
-                        <Tooltip key={skill.name}>
-                          <TooltipTrigger asChild>
-                            <motion.div
-                              variants={skillIconVariants}
-                              initial="rest"
-                              whileHover="hover"
-                              className={cn(
-                                "flex flex-col items-center gap-2 cursor-pointer",
-                                category === "Tools" && "flex-row justify-start"
-                              )}
-                            >
-                              <div className="w-16 h-16 bg-secondary rounded-lg flex items-center justify-center text-primary shrink-0">
-                                <skill.icon className="w-8 h-8" />
-                              </div>
-                              <p className="text-sm text-muted-foreground">
-                                {skill.name}
-                              </p>
-                            </motion.div>
-                          </TooltipTrigger>
-                          <TooltipContent>
-                            <p>{skill.description}</p>
-                          </TooltipContent>
-                        </Tooltip>
-                      ))}
+                      <div className={cn("contents", category === "Tools" && "grid grid-cols-3 gap-4 mb-4")}>
+                        {skills.map((skill) => (
+                          <Tooltip key={skill.name}>
+                            <TooltipTrigger asChild>
+                              <motion.div
+                                variants={skillIconVariants}
+                                initial="rest"
+                                whileHover="hover"
+                                className={cn(
+                                  "flex flex-col items-center gap-2 cursor-pointer"
+                                )}
+                              >
+                                <div className="w-16 h-16 bg-secondary rounded-lg flex items-center justify-center text-primary shrink-0">
+                                  <skill.icon className="w-8 h-8" />
+                                </div>
+                                <p className="text-sm text-center text-muted-foreground">
+                                  {skill.name}
+                                </p>
+                              </motion.div>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                              <p>{skill.description}</p>
+                            </TooltipContent>
+                          </Tooltip>
+                        ))}
+                      </div>
                       {category === "Tools" && (
-                        <div className="mt-4">
+                        <div>
                           <TerminalCard />
                         </div>
                       )}
