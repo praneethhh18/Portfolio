@@ -13,7 +13,8 @@ import {
   Trello,
   Briefcase,
   GraduationCap,
-  DraftingCompass
+  DraftingCompass,
+  Twitter
 } from "lucide-react";
 
 import { 
@@ -171,4 +172,9 @@ export const SOCIAL_LINKS = [
     url: "https://instagram.com/praneethhh.___",
     icon: Instagram,
   },
+  {
+    name: "Twitter",
+    url: "https://x.com/praneethhh_18",
+    icon: Twitter,
+  }
 ];

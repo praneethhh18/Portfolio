@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
+import SocialCard from "@/components/ui/social-card";
 
 const profileImage = PlaceHolderImages.find(
   (img) => img.id === "profile-praneeth"
@@ -125,16 +126,14 @@ export default function Hero() {
         </motion.div>
         <motion.div
           style={{ transform: "translateZ(30px)" }}
-          className="mt-8 flex flex-col sm:flex-row gap-4"
+          className="mt-8 flex flex-col sm:flex-row gap-4 items-center"
         >
           <Button asChild size="lg" className="font-bold">
             <a href="#projects">
               View Projects <ArrowRight className="ml-2" />
             </a>
           </Button>
-          <Button asChild size="lg" variant="outline" className="font-bold border-2 border-primary text-primary hover:text-primary-foreground">
-            <a href="#contact">Let's Connect</a>
-          </Button>
+          <SocialCard />
         </motion.div>
       </motion.div>
 
