@@ -2,10 +2,9 @@
 
 import { motion, useMotionValue, useTransform, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { ArrowRight, BrainCircuit, Code, DraftingCompass } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
 import SocialCard from "@/components/ui/social-card";
 
@@ -13,18 +12,6 @@ const profileImage = PlaceHolderImages.find(
   (img) => img.id === "profile-praneeth"
 );
 const heroBgImage = PlaceHolderImages.find((img) => img.id === "hero-background");
-
-
-const FloatingIcon = ({ icon: Icon, className, delay }: { icon: React.ElementType, className: string, delay: number }) => (
-    <motion.div
-        initial={{ opacity: 0, scale: 0.5, y: 50 }}
-        animate={{ opacity: 1, scale: 1, y: 0 }}
-        transition={{ duration: 0.5, delay, ease: "easeOut" }}
-        className={cn("absolute text-primary/50", className)}
-    >
-        <Icon className="w-12 h-12" />
-    </motion.div>
-);
 
 const SUBTITLES = [
     "AI Architect",
@@ -135,14 +122,6 @@ export default function Hero() {
           </Button>
           <SocialCard />
         </motion.div>
-      </motion.div>
-
-      {/* Floating Icons for Parallax */}
-      <motion.div style={{ transformStyle: "preserve-3d" }} className="absolute inset-0">
-          <FloatingIcon icon={BrainCircuit} className="top-[10%] left-[15%]" delay={0.3} />
-          <FloatingIcon icon={Code} className="bottom-[15%] right-[10%]" delay={0.5} />
-          <FloatingIcon icon={DraftingCompass} className="top-[20%] right-[20%]" delay={0.7} />
-          <FloatingIcon icon={BrainCircuit} className="bottom-[25%] left-[25%]" delay={0.4} />
       </motion.div>
     </section>
   );
