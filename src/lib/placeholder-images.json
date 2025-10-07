@@ -41,6 +41,12 @@
       "description": "Project image for Shopping Cart Challenge",
       "imageUrl": "https://picsum.photos/seed/shopping-cart/600/400",
       "imageHint": "ecommerce interface"
+    },
+    {
+      "id": "hero-background",
+      "description": "Abstract background for hero section",
+      "imageUrl": "https://picsum.photos/seed/hero-bg/1920/1080",
+      "imageHint": "abstract technology"
     }
   ]
 }

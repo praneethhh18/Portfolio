@@ -11,6 +11,8 @@ import { useEffect, useState } from "react";
 const profileImage = PlaceHolderImages.find(
   (img) => img.id === "profile-praneeth"
 );
+const heroBgImage = PlaceHolderImages.find((img) => img.id === "hero-background");
+
 
 const FloatingIcon = ({ icon: Icon, className, delay }: { icon: React.ElementType, className: string, delay: number }) => (
     <motion.div
@@ -63,13 +65,17 @@ export default function Hero() {
 
   return (
     <section id="home" className="relative h-screen w-full flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-background to-card" />
-       <motion.div
-        className="absolute inset-0 z-0"
-        style={{
-            backgroundImage: 'radial-gradient(ellipse 80% 50% at 50% -20%, hsl(var(--primary) / 0.1), transparent)',
-        }}
-      />
+      {heroBgImage && (
+        <Image
+          src={heroBgImage.imageUrl}
+          alt={heroBgImage.description}
+          fill
+          className="object-cover"
+          data-ai-hint={heroBgImage.imageHint}
+          priority
+        />
+      )}
+      <div className="absolute inset-0 bg-background/70 backdrop-blur-sm" />
       
       <motion.div
         style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
