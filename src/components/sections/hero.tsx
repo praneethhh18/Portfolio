@@ -52,7 +52,7 @@ export default function Hero() {
 
   return (
     <section id="home" className="relative h-screen w-full flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 z-0 bg-gradient-to-br from-background via-card to-background" />
+      <div className="absolute inset-0 z-0 animated-gradient" />
       <div className="absolute inset-0 bg-background/70 backdrop-blur-sm" />
       
       <motion.div
