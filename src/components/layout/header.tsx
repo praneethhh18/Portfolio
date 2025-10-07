@@ -49,9 +49,7 @@ export default function Header() {
         </nav>
         
         <div className="hidden md:flex items-center">
-          <Button asChild size="sm" className="font-bold">
-            <a href="#contact">Let's Connect</a>
-          </Button>
+          {/* "Let's Connect" button removed as per request */}
         </div>
 
         {/* Mobile Navigation */}
@@ -87,9 +85,7 @@ export default function Header() {
                   ))}
                 </nav>
                 <div className="mt-auto">
-                  <Button asChild className="w-full font-bold text-lg h-12">
-                     <a href="#contact" onClick={() => setSheetOpen(false)}>Let's Connect</a>
-                  </Button>
+                  {/* "Let's Connect" button removed as per request */}
                 </div>
               </div>
             </SheetContent>
