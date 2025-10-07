@@ -1,11 +1,12 @@
 "use client";
 
-import { motion, useMotionValue, useTransform } from "framer-motion";
+import { motion, useMotionValue, useTransform, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { ArrowRight, BrainCircuit, Code, DraftingCompass } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { cn } from "@/lib/utils";
+import { useEffect, useState } from "react";
 
 const profileImage = PlaceHolderImages.find(
   (img) => img.id === "profile-praneeth"
@@ -22,7 +23,24 @@ const FloatingIcon = ({ icon: Icon, className, delay }: { icon: React.ElementTyp
     </motion.div>
 );
 
+const SUBTITLES = [
+    "AI Architect",
+    "Digital Artisan",
+    "Solutions Developer"
+];
+
 export default function Hero() {
+    const [subtitleIndex, setSubtitleIndex] = useState(0);
+    const [isMounted, setIsMounted] = useState(false);
+
+    useEffect(() => {
+        setIsMounted(true);
+        const interval = setInterval(() => {
+            setSubtitleIndex((prevIndex) => (prevIndex + 1) % SUBTITLES.length);
+        }, 3000);
+        return () => clearInterval(interval);
+    }, []);
+
     const x = useMotionValue(0);
     const y = useMotionValue(0);
 
@@ -46,12 +64,12 @@ export default function Hero() {
   return (
     <section id="home" className="relative h-screen w-full flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-background to-card" />
-      <motion.div 
-        className="absolute inset-0"
+       <motion.div
+        className="absolute inset-0 z-0"
         style={{
-            backgroundImage: 'radial-gradient(ellipse 80% 50% at 50% -20%, hsl(var(--primary) / 0.1), transparent), linear-gradient(to right, hsl(var(--background)), hsl(var(--card)), hsl(var(--background)))',
+            backgroundImage: 'radial-gradient(ellipse 80% 50% at 50% -20%, hsl(var(--primary) / 0.1), transparent)',
         }}
-       />
+      />
       
       <motion.div
         style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
@@ -81,12 +99,24 @@ export default function Hero() {
         >
           Hi, I’m Praneeth P K
         </motion.h1>
-        <motion.p
+        <motion.div
           style={{ transform: "translateZ(40px)" }}
-          className="mt-4 text-lg md:text-xl max-w-2xl text-foreground/80"
+          className="mt-4 text-lg md:text-xl max-w-2xl text-foreground/80 h-8"
         >
-          AI Architect | Digital Artisan | Solutions Developer
-        </motion.p>
+          <AnimatePresence mode="wait">
+            {isMounted && (
+              <motion.p
+                key={subtitleIndex}
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 20 }}
+                transition={{ duration: 0.5 }}
+              >
+                {SUBTITLES[subtitleIndex]}
+              </motion.p>
+            )}
+          </AnimatePresence>
+        </motion.div>
         <motion.div
           style={{ transform: "translateZ(30px)" }}
           className="mt-8 flex flex-col sm:flex-row gap-4"
