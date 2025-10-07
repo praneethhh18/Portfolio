@@ -1,3 +1,46 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "profile-praneeth",
+      "description": "Profile photo of Praneeth P K",
+      "imageUrl": "https://picsum.photos/seed/praneeth-profile/200/200",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "about-praneeth",
+      "description": "A professional photo of Praneeth for the about section",
+      "imageUrl": "https://picsum.photos/seed/praneeth-about/600/800",
+      "imageHint": "man working"
+    },
+    {
+      "id": "project-horizon-db",
+      "description": "Project image for Horizon DB",
+      "imageUrl": "https://picsum.photos/seed/horizon-db/600/400",
+      "imageHint": "database technology"
+    },
+    {
+      "id": "project-deepfake",
+      "description": "Project image for DeepFake Anomaly Detection",
+      "imageUrl": "https://picsum.photos/seed/deepfake/600/400",
+      "imageHint": "ai face"
+    },
+    {
+      "id": "project-sar-ship",
+      "description": "Project image for SAR Ship Detection",
+      "imageUrl": "https://picsum.photos/seed/sar-ship/600/400",
+      "imageHint": "satellite ship"
+    },
+    {
+      "id": "project-skillbridge-ai",
+      "description": "Project image for SkillBridge AI",
+      "imageUrl": "https://images.unsplash.com/photo-1758520144555-af04bf9ad3e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2FyZWVyJTIwcGF0aHxlbnwwfHx8fDE3NTk3ODMwMjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "career path"
+    },
+    {
+      "id": "project-shopping-cart",
+      "description": "Project image for Shopping Cart Challenge",
+      "imageUrl": "https://picsum.photos/seed/shopping-cart/600/400",
+      "imageHint": "ecommerce interface"
+    }
+  ]
 }
