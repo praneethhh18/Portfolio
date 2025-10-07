@@ -49,7 +49,7 @@ const itemVariants = {
 
 export default function HireMe() {
   return (
-    <section id="hire-me" className="py-24 sm:py-32 flex items-center justify-center bg-card/30">
+    <section id="hire-me" className="py-16 sm:py-20 flex items-center justify-center bg-card/30">
       <motion.div 
         className="container mx-auto px-4 flex items-center justify-center"
         initial="hidden"
