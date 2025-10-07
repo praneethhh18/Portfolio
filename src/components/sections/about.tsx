@@ -6,7 +6,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { TIMELINE, CERTIFICATIONS } from "@/lib/data";
-import { TerminalCard } from "@/components/ui/terminal-card";
 
 const aboutImage = PlaceHolderImages.find((img) => img.id === "about-praneeth");
 
@@ -70,8 +69,6 @@ export default function About() {
             <p className="text-lg text-foreground/80">
               I am an AI & ML student passionate about building innovative projects and exploring emerging technologies. I love research, experimenting with AI, and crafting impactful solutions as a hands-on ‘Vibe Coder.’
             </p>
-            
-            <TerminalCard />
 
             <div className="relative">
               <div className="absolute left-3 top-3 bottom-3 w-0.5 bg-border -z-10" />

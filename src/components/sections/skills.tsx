@@ -9,6 +9,8 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { SKILLS } from "@/lib/data";
+import { TerminalCard } from "@/components/ui/terminal-card";
+import { cn } from "@/lib/utils";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -67,7 +69,7 @@ export default function Skills() {
                     <CardTitle className="text-primary">{category}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <div className="grid grid-cols-3 gap-4">
+                    <div className={cn("grid grid-cols-3 gap-4", category === "Tools" && 'flex flex-col')}>
                       {skills.map((skill) => (
                         <Tooltip key={skill.name}>
                           <TooltipTrigger asChild>
@@ -90,6 +92,11 @@ export default function Skills() {
                           </TooltipContent>
                         </Tooltip>
                       ))}
+                       {category === "Tools" && (
+                        <div className="col-span-3 mt-4">
+                           <TerminalCard />
+                        </div>
+                      )}
                     </div>
                   </CardContent>
                 </Card>
