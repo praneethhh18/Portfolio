@@ -40,7 +40,7 @@ export default function Header() {
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-6 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+        <nav className="hidden md:flex items-center gap-6">
           {NAV_ITEMS.map((item) => (
             <NavLink key={item.name} href={item.href}>
               {item.name}
