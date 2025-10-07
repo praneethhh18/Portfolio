@@ -5,21 +5,32 @@ import styled from 'styled-components';
 
 const ThemeSwitch = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    setIsMounted(true);
     const isDark = document.documentElement.classList.contains('dark');
     setIsDarkMode(isDark);
   }, []);
 
-  const toggleTheme = () => {
-    if (isDarkMode) {
-      document.documentElement.classList.remove('dark');
-      setIsDarkMode(false);
-    } else {
-      document.documentElement.classList.add('dark');
-      setIsDarkMode(true);
+  useEffect(() => {
+    if (isMounted) {
+        if (isDarkMode) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
     }
+  }, [isDarkMode, isMounted]);
+
+
+  const toggleTheme = () => {
+    setIsDarkMode(prev => !prev);
   };
+  
+  if (!isMounted) {
+    return null; // Don't render anything on the server or during initial client render
+  }
 
   return (
     <StyledWrapper>
