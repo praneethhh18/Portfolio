@@ -5,6 +5,7 @@ import Image from "next/image";
 import { ArrowRight, BrainCircuit, Code, Database } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
+import { cn } from "@/lib/utils";
 
 const profileImage = PlaceHolderImages.find(
   (img) => img.id === "profile-praneeth"
