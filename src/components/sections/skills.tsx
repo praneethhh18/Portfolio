@@ -69,7 +69,7 @@ export default function Skills() {
                   </CardHeader>
                   <CardContent>
                     <div
-                      className="grid grid-cols-3 gap-4"
+                      className="grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-6"
                     >
                       {skills.map((skill) => (
                           <Tooltip key={skill.name}>
@@ -80,10 +80,10 @@ export default function Skills() {
                                 whileHover="hover"
                                 className="flex flex-col items-center gap-2 cursor-pointer"
                               >
-                                <div className="w-16 h-16 bg-secondary rounded-lg flex items-center justify-center text-primary shrink-0">
-                                  <skill.icon className="w-8 h-8" />
+                                <div className="w-16 h-16 bg-secondary rounded-lg flex items-center justify-center text-primary shrink-0 p-3">
+                                  <skill.icon className="w-full h-full" />
                                 </div>
-                                <p className="text-sm text-center text-muted-foreground">
+                                <p className="text-xs text-center text-muted-foreground leading-tight">
                                   {skill.name}
                                 </p>
                               </motion.div>

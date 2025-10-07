@@ -16,3 +16,98 @@ export function WhatsAppIcon(props: SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
+
+export function TensorFlowIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" {...props}>
+      <path d="M12.12,4.06,7.2,7.21V9.52L9.58,11,12,9.65,14.42,11,16.8,9.52V7.21L11.88,4.06ZM12,4.94l2.81,1.62v3.25l-2.81,1.62-2.81-1.62V6.56Z" />
+      <path d="M11,9.58,9.52,7.2,4.06,10.25v3.5L7.21,12,9.52,14.42,11,12.06v-2.48Z" />
+      <path d="M13,9.58,14.48,7.2,19.94,10.25v3.5L16.79,12,14.48,14.42,13,12.06v-2.48Z" />
+      <path d="M12,14.35,9.58,13,7.2,14.48v2.3L11.88,19.94l4.92-2.85v-2.3L14.42,13Z" />
+    </svg>
+  );
+}
+
+export function ScikitLearnIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" {...props}>
+      <path d="M12.06,2.62A3.2,3.2,0,0,0,8.87,5.81V9.43a3.2,3.2,0,0,0,6.38,0V5.81A3.2,3.2,0,0,0,12.06,2.62Z" fill="#f89939"/>
+      <path d="M19.16,6.77a3.2,3.2,0,0,0-3.19,3.19v5.86a3.2,3.2,0,0,0,6.38,0V10A3.2,3.2,0,0,0,19.16,6.77Z" fill="#59a9db"/>
+      <path d="M4.84,6.77a3.2,3.2,0,0,0,0,6.38h5.86a3.2,3.2,0,0,0,0-6.38Z" fill="#67a346"/>
+    </svg>
+  );
+}
+
+export function PythonIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" {...props}>
+      <path d="M14.5,14.07a2.59,2.59,0,0,1-2.59-2.59V9.93H10.36v1.55a2.59,2.59,0,0,1-2.59,2.59H6.22V11.5a2.59,2.,0,0,1,2.59-2.59h3.64V7.36H9.93a2.59,2.59,0,0,1-2.59-2.59V3.22h5.18v1.55a2.59,2.59,0,0,1,2.59,2.59h1.55V6.22a2.59,2.59,0,0,1-2.59-2.59V2.07h3.64A2.59,2.59,0,0,1,22.3,4.66v3.64h-1.55a2.59,2.59,0,0,1-2.59-2.59V4.17h-1.5v1.59a2.59,2.59,0,0,1-2.59,2.59Z" fill="#306998"/>
+      <path d="M9.5,9.93a2.59,2.59,0,0,1,2.59,2.59v1.55h1.55V12.52a2.59,2.59,0,0,1,2.59-2.59h1.55v2.59a2.59,2.59,0,0,1-2.59,2.59H11.54v1.55h2.59A2.59,2.59,0,0,1,16.72,18v1.55h5.18V16.9a2.59,2.59,0,0,1-2.59-2.59V12.76h-1.55A2.59,2.59,0,0,1,15,15.35v1.55h-1.5V14.31a2.59,2.59,0,0,1,2.59-2.59h2.59V8.08a2.59,2.59,0,0,1,2.59-2.59H22.3v3.64h-1.55a2.59,2.59,0,0,1-2.59,2.59Z" fill="#ffd43b"/>
+    </svg>
+  );
+}
+
+export function TypeScriptIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" {...props}>
+      <path d="M1.5,1.5v21h21v-21h-21z M16.713,10.492h-4.398V20.55h-2.99V10.492H5.166V7.785h11.547V10.492z" fill="#007acc"/>
+      <polygon points="16.713,7.785 16.713,10.492 12.314,10.492 12.314,20.55 9.324,20.55 9.324,10.492 5.166,10.492 5.166,7.785 " fill="#ffffff"/>
+    </svg>
+  );
+}
+
+export function ReactIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" {...props}>
+      <circle cx="12" cy="12" r="2" fill="#61dafb"/>
+      <g stroke="#61dafb" strokeWidth="1" fill="none">
+        <ellipse cx="12" cy="12" rx="11" ry="4.2"/>
+        <ellipse cx="12" cy="12" rx="11" ry="4.2" transform="rotate(60 12 12)"/>
+        <ellipse cx="12" cy="12" rx="11" ry="4.2" transform="rotate(120 12 12)"/>
+      </g>
+    </svg>
+  );
+}
+
+export function NextjsIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" {...props}>
+      <path d="M14.54,3.3l-3.2,5.55,6.06,10.5H23ZM9.46,20.7,18.52,5.2,16.8,2.5H7.2L2,12l7.46,8.7Z"/>
+    </svg>
+  );
+}
+
+export function FlutterIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" {...props}>
+      <path d="m13.84 17.2-7.01-7.01L13.84 3.19a.4.4 0 0 1 .56 0L20.81 9.6a.4.4 0 0 1 0 .56l-7.01 7.03a.4.4 0 0 1-.56 0ZM7.4 10.35l6.44 6.44-6.44 6.44a.4.4 0 0 1-.56 0l-6.44-6.44a.4.4 0 0 1 0-.56l6.44-6.44a.4.4 0 0 1 .56 0Z" fill="#027DFD"/>
+    </svg>
+  );
+}
+
+export function MongodbIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" {...props}>
+      <path d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10S17.52,2,12,2z M13.9,18.2C13,18.7,12,18.9,11.2,18.9 c-1.5,0-2.8-0.6-3.8-1.8c-1.3-1.6-1.5-3.8-0.6-6c0.9-2.2,3.1-3.6,5.4-3.6c0.5,0,0.9,0.1,1.3,0.2c-0.1,0.2-0.2,0.4-0.3,0.6 c-0.6-0.3-1.3-0.5-2.1-0.5c-2.4,0-4.4,1.9-4.4,4.4s1.9,4.4,4.4,4.4c0.8,0,1.6-0.3,2.2-0.7L13.9,18.2z" fill="#47a248"/>
+    </svg>
+  );
+}
+
+export function GoogleCloudIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" {...props}>
+      <path d="M19.1 11.4C19.1 11 19.1 10.7 19.1 10.4C19.1 5.8 15.3 2 10.7 2C6.7 2 3.5 4.8 2.6 8.5C1.1 9 0 10.3 0 11.8C0 13.5 1.4 15 3.1 15L6.3 15C6.3 16.7 7.7 18 9.4 18C10.6 18 11.7 17.4 12.3 16.5L15.3 21.6C15.9 22.5 17 23 18.2 23C20.3 23 22 21.3 22 19.2C22 17.8 21.2 16.6 20 16L19.1 11.4Z" fill="#4285F4"/>
+      <path d="M15.3 21.6L12.3 16.5C11.7 17.4 10.6 18 9.4 18C7.7 18 6.3 16.7 6.3 15L3.1 15C1.4 15 0 13.5 0 11.8C0 10.3 1.1 9 2.6 8.5C3.5 4.8 6.7 2 10.7 2C15.3 2 19.1 5.8 19.1 10.4C19.1 10.7 19.1 11 19.1 11.4L20 16C21.2 16.6 22 17.8 22 19.2C22 21.3 20.3 23 18.2 23C17 23 15.9 22.5 15.3 21.6Z" fill="#34A853"/>
+      <path d="M12.3 16.5C11.7 17.4 10.6 18 9.4 18C7.7 18 6.3 16.7 6.3 15L3.1 15C1.4 15 0 13.5 0 11.8C0 10.3 1.1 9 2.6 8.5C3.5 4.8 6.7 2 10.7 2C15.3 2 19.1 5.8 19.1 10.4C19.1 10.7 19.1 11 19.1 11.4L15.3 21.6C15.9 22.5 17 23 18.2 23C20.3 23 22 21.3 22 19.2C22 17.8 21.2 16.6 20 16L12.3 16.5Z" fill="#FBBC05"/>
+      <path d="M10.7 2C6.7 2 3.5 4.8 2.6 8.5C1.1 9 0 10.3 0 11.8C0 13.5 1.4 15 3.1 15L6.3 15C6.3 16.7 7.7 18 9.4 18C10.6 18 11.7 17.4 12.3 16.5L15.3 21.6C15.9 22.5 17 23 18.2 23C20.3 23 22 21.3 22 19.2C22 17.8 21.2 16.6 20 16L19.1 11.4C19.1 11 19.1 10.7 19.1 10.4C19.1 5.8 15.3 2 10.7 2Z" fill="#EA4335"/>
+    </svg>
+  );
+}
+
+export function VSCodeIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" {...props}>
+      <path d="M23.1,13.2l-5.6-5.6L23,2.1a.9.9,0,0,0-.9-1.5L16.4,1,10.8,6.5.6,1.2A.9.9,0,0,0,0,2.1L5.3,7.5.1,12.7a.9.9,0,0,0,.6,1.5l6.3.3,4.8,4.8,4.8-4.8,6.3-.3a.9.9,0,0,0,.6-1.5Zm-9.2-2.1L5,2.2,9.3,6.5Zm0,0,8.9-8.9L18.7,6.5Z" fill="#007ACC"/>
+    </svg>
+  );
+}

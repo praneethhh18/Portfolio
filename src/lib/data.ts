@@ -16,7 +16,19 @@ import {
   DraftingCompass
 } from "lucide-react";
 
-import { WhatsAppIcon } from "@/components/icons";
+import { 
+  WhatsAppIcon,
+  TensorFlowIcon,
+  ScikitLearnIcon,
+  PythonIcon,
+  TypeScriptIcon,
+  ReactIcon,
+  NextjsIcon,
+  FlutterIcon,
+  MongodbIcon,
+  GoogleCloudIcon,
+  VSCodeIcon
+} from "@/components/icons";
 
 export const PROJECTS = [
   {
@@ -58,26 +70,26 @@ export const PROJECTS = [
 
 export const SKILLS = {
   "AI & ML": [
-    { name: "TensorFlow", icon: BrainCircuit, description: "Building and training production-grade neural networks and machine learning models." },
-    { name: "Scikit-learn", icon: BrainCircuit, description: "Applying classical machine learning algorithms for data analysis and predictive modeling." },
+    { name: "TensorFlow", icon: TensorFlowIcon, description: "Building and training production-grade neural networks and machine learning models." },
+    { name: "Scikit-learn", icon: ScikitLearnIcon, description: "Applying classical machine learning algorithms for data analysis and predictive modeling." },
     { name: "AI Agents", icon: BrainCircuit, description: "Architecting autonomous agents that reason, plan, and execute complex tasks." },
     { name: "GenAI APIs", icon: BrainCircuit, description: "Integrating and fine-tuning large language models for novel applications." },
   ],
   "Programming": [
-    { name: "Python", icon: Code, description: "Crafting robust backend systems, data pipelines, and AI-powered services." },
-    { name: "TypeScript", icon: Code, description: "Developing scalable and maintainable web applications with type safety." },
-    { name: "React", icon: Code, description: "Building dynamic, component-based user interfaces with a focus on performance." },
-    { name: "Next.js", icon: Code, description: "Leveraging server-side rendering and static generation for optimal web experiences." },
-    { name: "Flutter", icon: Smartphone, description: "Creating cross-platform mobile applications with a beautiful and native feel." },
+    { name: "Python", icon: PythonIcon, description: "Crafting robust backend systems, data pipelines, and AI-powered services." },
+    { name: "TypeScript", icon: TypeScriptIcon, description: "Developing scalable and maintainable web applications with type safety." },
+    { name: "React", icon: ReactIcon, description: "Building dynamic, component-based user interfaces with a focus on performance." },
+    { name: "Next.js", icon: NextjsIcon, description: "Leveraging server-side rendering and static generation for optimal web experiences." },
+    { name: "Flutter", icon: FlutterIcon, description: "Creating cross-platform mobile applications with a beautiful and native feel." },
   ],
   "Data & Cloud": [
-    { name: "MongoDB", icon: Database, description: "Designing and managing flexible, high-performance NoSQL database schemas." },
+    { name: "MongoDB", icon: MongodbIcon, description: "Designing and managing flexible, high-performance NoSQL database schemas." },
     { name: "Data Science", icon: Database, description: "Transforming raw data into actionable insights through statistical analysis and visualization." },
-    { name: "Google Cloud", icon: Server, description: "Deploying and scaling applications on a secure and reliable cloud infrastructure." },
+    { name: "Google Cloud", icon: GoogleCloudIcon, description: "Deploying and scaling applications on a secure and reliable cloud infrastructure." },
   ],
   "Tools": [
     { name: "GitHub", icon: Github, description: "Managing complex codebases and collaborating effectively with distributed teams." },
-    { name: "VS Code", icon: Code, description: "Optimizing development workflows with a highly customized and efficient code editor." },
+    { name: "VS Code", icon: VSCodeIcon, description: "Optimizing development workflows with a highly customized and efficient code editor." },
     { name: "Prompt Engineering", icon: PencilRuler, description: "Mastering the art of instructing AI models to achieve precise and creative outcomes." },
     { name: "Trello", icon: Trello, description: "Orchestrating project timelines and deliverables with agile methodologies." },
   ],
