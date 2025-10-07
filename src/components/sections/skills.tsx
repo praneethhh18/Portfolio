@@ -92,12 +92,12 @@ export default function Skills() {
                           </TooltipContent>
                         </Tooltip>
                       ))}
-                       {category === "Tools" && (
+                    </div>
+                    {category === "Tools" && (
                         <div className="mt-4">
                            <TerminalCard />
                         </div>
-                      )}
-                    </div>
+                    )}
                   </CardContent>
                 </Card>
               </motion.div>
