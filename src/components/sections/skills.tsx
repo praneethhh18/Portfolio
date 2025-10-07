@@ -9,7 +9,6 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { SKILLS } from "@/lib/data";
-import { TerminalCard } from "@/components/ui/terminal-card";
 import { cn } from "@/lib/utils";
 
 const containerVariants = {
@@ -70,22 +69,16 @@ export default function Skills() {
                   </CardHeader>
                   <CardContent>
                     <div
-                      className={cn(
-                        "grid grid-cols-3 gap-4",
-                        category === "Tools" && "grid-cols-1 flex flex-col"
-                      )}
+                      className="grid grid-cols-3 gap-4"
                     >
-                      <div className={cn("contents", category === "Tools" && "grid grid-cols-3 gap-4 mb-4")}>
-                        {skills.map((skill) => (
+                      {skills.map((skill) => (
                           <Tooltip key={skill.name}>
                             <TooltipTrigger asChild>
                               <motion.div
                                 variants={skillIconVariants}
                                 initial="rest"
                                 whileHover="hover"
-                                className={cn(
-                                  "flex flex-col items-center gap-2 cursor-pointer"
-                                )}
+                                className="flex flex-col items-center gap-2 cursor-pointer"
                               >
                                 <div className="w-16 h-16 bg-secondary rounded-lg flex items-center justify-center text-primary shrink-0">
                                   <skill.icon className="w-8 h-8" />
@@ -100,12 +93,6 @@ export default function Skills() {
                             </TooltipContent>
                           </Tooltip>
                         ))}
-                      </div>
-                      {category === "Tools" && (
-                        <div>
-                          <TerminalCard />
-                        </div>
-                      )}
                     </div>
                   </CardContent>
                 </Card>
