@@ -69,7 +69,12 @@ export default function Skills() {
                     <CardTitle className="text-primary">{category}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <div className={cn("grid grid-cols-3 gap-4", category === "Tools" && "grid-cols-1")}>
+                    <div
+                      className={cn(
+                        "grid grid-cols-3 gap-4",
+                        category === "Tools" && "grid-cols-1"
+                      )}
+                    >
                       {skills.map((skill) => (
                         <Tooltip key={skill.name}>
                           <TooltipTrigger asChild>
@@ -77,12 +82,15 @@ export default function Skills() {
                               variants={skillIconVariants}
                               initial="rest"
                               whileHover="hover"
-                              className={cn("flex flex-col items-center gap-2 cursor-pointer", category === "Tools" && "flex-row justify-start")}
+                              className={cn(
+                                "flex flex-col items-center gap-2 cursor-pointer",
+                                category === "Tools" && "flex-row justify-start"
+                              )}
                             >
                               <div className="w-16 h-16 bg-secondary rounded-lg flex items-center justify-center text-primary shrink-0">
                                 <skill.icon className="w-8 h-8" />
                               </div>
-                              <p className="text-xs text-center text-muted-foreground truncate w-full">
+                              <p className="text-sm text-muted-foreground">
                                 {skill.name}
                               </p>
                             </motion.div>
@@ -92,12 +100,12 @@ export default function Skills() {
                           </TooltipContent>
                         </Tooltip>
                       ))}
-                    </div>
-                    {category === "Tools" && (
+                      {category === "Tools" && (
                         <div className="mt-4">
-                           <TerminalCard />
+                          <TerminalCard />
                         </div>
-                    )}
+                      )}
+                    </div>
                   </CardContent>
                 </Card>
               </motion.div>
