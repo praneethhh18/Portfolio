@@ -36,7 +36,7 @@ export default function Header() {
       className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-5xl"
     >
       <div className="flex items-center justify-between h-16 px-6 rounded-2xl bg-card/50 backdrop-blur-lg border border-white/10 shadow-lg">
-        <a href="#home" className="text-lg font-headline font-bold text-primary mr-auto">
+        <a href="#home" className="text-lg font-headline font-bold text-primary">
           Praneeth.AI
         </a>
 
@@ -49,14 +49,14 @@ export default function Header() {
           ))}
         </nav>
         
-        <div className="hidden md:flex items-center ml-auto">
+        <div className="hidden md:flex items-center">
           <Button asChild size="sm" className="font-bold">
             <a href="#contact">Let's Connect</a>
           </Button>
         </div>
 
         {/* Mobile Navigation */}
-        <div className="md:hidden ml-auto">
+        <div className="md:hidden">
           <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
