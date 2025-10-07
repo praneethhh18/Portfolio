@@ -64,10 +64,10 @@ export function Chatbot() {
           transition={{ duration: 0.5, delay: 1, type: "spring" }}
           className="fixed bottom-6 right-6 z-50"
         >
-          <Button size="icon" className="w-16 h-16 rounded-full shadow-2xl">
-            <Bot className="w-8 h-8" />
-            <span className="sr-only">Open Chatbot</span>
-          </Button>
+          <button className="loader">
+            <Bot className="w-8 h-8 text-amber-400 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20" />
+            <span></span>
+          </button>
         </motion.div>
       </SheetTrigger>
       <SheetContent className="w-[400px] sm:w-[540px] bg-background p-0 flex flex-col">
