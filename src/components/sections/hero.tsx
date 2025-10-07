@@ -7,11 +7,11 @@ import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { useEffect, useState } from "react";
 import SocialCard from "@/components/ui/social-card";
+import { ShaderGradientBackground } from "../ui/shader-gradient-background";
 
 const profileImage = PlaceHolderImages.find(
   (img) => img.id === "profile-praneeth"
 );
-const heroBgImage = PlaceHolderImages.find((img) => img.id === "hero-background");
 
 const SUBTITLES = [
     "AI Architect",
@@ -53,16 +53,7 @@ export default function Hero() {
 
   return (
     <section id="home" className="relative h-screen w-full flex items-center justify-center overflow-hidden">
-      {heroBgImage && (
-        <Image
-          src={heroBgImage.imageUrl}
-          alt={heroBgImage.description}
-          fill
-          className="object-cover"
-          data-ai-hint={heroBgImage.imageHint}
-          priority
-        />
-      )}
+      <ShaderGradientBackground />
       <div className="absolute inset-0 bg-background/70 backdrop-blur-sm" />
       
       <motion.div
