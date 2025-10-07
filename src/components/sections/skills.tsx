@@ -58,7 +58,7 @@ export default function Skills() {
 
         <TooltipProvider>
           <motion.div
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+            className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6"
             variants={containerVariants}
           >
             {Object.entries(SKILLS).map(([category, skills]) => (
@@ -69,7 +69,7 @@ export default function Skills() {
                   </CardHeader>
                   <CardContent>
                     <div
-                      className="grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-6"
+                      className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-3 gap-x-4 gap-y-6"
                     >
                       {skills.map((skill) => (
                           <Tooltip key={skill.name}>
