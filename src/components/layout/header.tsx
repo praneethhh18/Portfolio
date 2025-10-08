@@ -23,9 +23,9 @@ export default function Header() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ type: "spring", stiffness: 100, damping: 20, delay: 1 }}
-      className="fixed top-6 left-1/2 -translate-x-1/2 z-50"
+      className="fixed top-6 left-0 right-0 z-50 flex justify-center"
     >
-      <div className="relative bg-background/60 backdrop-blur-lg rounded-full shadow-lg border border-white/10 px-4 py-2 flex items-center gap-4">
+      <div className="bg-background/60 backdrop-blur-lg rounded-full shadow-lg border border-white/10 px-4 py-2 flex items-center gap-4">
         <a href="#home" className="text-lg font-headline font-bold text-primary flex-shrink-0">
           Praneeth.AI
         </a>
