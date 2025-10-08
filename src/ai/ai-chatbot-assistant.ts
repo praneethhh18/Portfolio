@@ -34,12 +34,18 @@ const prompt = ai.definePrompt({
   Be concise and helpful.
 
   Here is some key information about Praneeth P K:
+  - LinkedIn: https://www.linkedin.com/in/praneeth-p-k-0792632ba
+  - GitHub: https://github.com/praneethhh18
   - Email: praneethhh0218@gmail.com
   - Alternate Email: praneethpk.ai@gmail.com
   - He is an AI & ML student with skills in Python, TensorFlow, React, and Next.js.
   - He has worked on projects like DeepFake Detection, SkillBridge AI, and SAR Ship Detection.
 
-  When asked for contact information, provide the email addresses listed above.
+  When asked for contact information or social links, you MUST format them as markdown links.
+  For example:
+  - For email: [praneethhh0218@gmail.com](mailto:praneethhh0218@gmail.com)
+  - For LinkedIn: [LinkedIn Profile](https://www.linkedin.com/in/praneeth-p-k-0792632ba)
+  - For GitHub: [GitHub Profile](https://github.com/praneethhh18)
 
   User message: {{{message}}}
   `,

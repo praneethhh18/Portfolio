@@ -1,7 +1,7 @@
 
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useMemo } from "react";
 import { Bot, Send, User, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
@@ -15,6 +15,49 @@ interface Message {
   text: string;
   sender: "user" | "bot";
 }
+
+const LinkedText = ({ text }: { text: string }) => {
+    const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+    const parts = useMemo(() => {
+      const result: (string | JSX.Element)[] = [];
+      let lastIndex = 0;
+      let match;
+  
+      while ((match = linkRegex.exec(text)) !== null) {
+        const [fullMatch, linkText, url] = match;
+        const index = match.index;
+  
+        // Add text before the link
+        if (index > lastIndex) {
+          result.push(text.substring(lastIndex, index));
+        }
+  
+        // Add the link
+        result.push(
+          <a
+            key={url + index}
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary underline hover:opacity-80"
+          >
+            {linkText}
+          </a>
+        );
+  
+        lastIndex = index + fullMatch.length;
+      }
+  
+      // Add any remaining text
+      if (lastIndex < text.length) {
+        result.push(text.substring(lastIndex));
+      }
+  
+      return result;
+    }, [text]);
+  
+    return <p className="text-sm">{parts}</p>;
+  };
 
 export function Chatbot() {
   const [isOpen, setIsOpen] = useState(false);
@@ -127,7 +170,7 @@ export function Chatbot() {
                                         : "bg-secondary rounded-bl-none"
                                     }`}
                                 >
-                                    <p className="text-sm">{message.text}</p>
+                                    <LinkedText text={message.text} />
                                 </div>
                                 {message.sender === "user" && (
                                     <Avatar className="h-8 w-8 self-start">
