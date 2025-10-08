@@ -57,7 +57,7 @@ export function ProjectCard({ project }: { project: Project }) {
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
-      className="relative w-full"
+      className="relative w-full h-full"
     >
       <div
         style={{ transform: "translateZ(50px)", transformStyle: "preserve-3d" }}
