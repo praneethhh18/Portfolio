@@ -61,7 +61,7 @@ export function ProjectCard({ project }: { project: Project }) {
     >
       <div
         style={{ transform: "translateZ(50px)", transformStyle: "preserve-3d" }}
-        className="bg-card/50 border border-white/10 rounded-xl overflow-hidden shadow-lg group relative"
+        className="bg-card/50 border border-white/10 rounded-xl overflow-hidden shadow-lg group relative flex flex-col h-full"
       >
         <div className="aspect-video relative">
           {projectImage && (
@@ -75,10 +75,10 @@ export function ProjectCard({ project }: { project: Project }) {
           )}
           <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent" />
         </div>
-        <div className="p-6">
+        <div className="p-6 flex flex-col flex-grow">
           <h3 className="text-xl font-bold font-headline mb-2">{project.title}</h3>
-          <p className="text-sm text-muted-foreground mb-4 h-10">{project.description}</p>
-          <div className="flex flex-wrap gap-2 mb-4">
+          <p className="text-sm text-muted-foreground mb-4 flex-grow">{project.description}</p>
+          <div className="flex flex-wrap gap-2 mt-auto">
             {project.tech.map((tag) => (
               <Badge key={tag} variant="secondary">{tag}</Badge>
             ))}
