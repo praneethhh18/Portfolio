@@ -1,3 +1,4 @@
+
 import {
   BrainCircuit,
   Code,
@@ -46,7 +47,7 @@ export const PROJECTS = [
   },
   {
     title: "SkillBridge AI",
-    description: "An intelligent platform for skill gap analysis and personalized career path recommendations, helping professionals to navigate their career development effectively.",
+    description: "An intelligent platform for skill gap analysis and personalized career path recommendations, helping youths to navigate their career development and path effectively.",
     tech: ["GenAI", "React", "Next.js", "AI Agents"],
     imageUrlId: "project-skillbridge-ai",
     githubUrl: "https://github.com/praneethhh18",
