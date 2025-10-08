@@ -53,7 +53,7 @@ export default function Hero() {
         if (isPlaying || (audioRef.current && !audioRef.current.paused)) return;
         setIsPlaying(true);
         try {
-            const { audio } = await textToSpeech({ text: "Hello my friend" });
+            const { audio } = await textToSpeech({ text: "hello, welcome to praneeth p k portfolio" });
             if (audioRef.current) {
                 audioRef.current.src = audio;
                 audioRef.current.play();
