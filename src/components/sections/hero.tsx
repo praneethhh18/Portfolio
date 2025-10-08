@@ -65,7 +65,7 @@ export default function Hero() {
                 className="w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-primary/50 shadow-lg cursor-pointer"
             >
                 <Image
-                src="/car.jpg"
+                src="/car2.jpg"
                 alt="Praneeth P K"
                 width={128}
                 height={128}
