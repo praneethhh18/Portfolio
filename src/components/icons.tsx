@@ -43,12 +43,12 @@ export function PythonIcon(props: SVGProps<SVGSVGElement>) {
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 255" {...props}>
         <defs>
             <linearGradient id="logosPython0" x1="12.959%" x2="79.639%" y1="12.039%" y2="78.201%">
-                <stop offset="0%" stopColor="#387EB8"/>
-                <stop offset="100%" stopColor="#366994"/>
+                <stop offset="0%" stop-color="#387EB8"/>
+                <stop offset="100%" stop-color="#366994"/>
             </linearGradient>
             <linearGradient id="logosPython1" x1="19.128%" x2="90.742%" y1="20.579%" y2="88.429%">
-                <stop offset="0%" stopColor="#FFE052"/>
-                <stop offset="100%" stopColor="#FFC331"/>
+                <stop offset="0%" stop-color="#FFE052"/>
+                <stop offset="100%" stop-color="#FFC331"/>
             </linearGradient>
         </defs>
         <path fill="url(#logosPython0)" d="M126.916.072c-64.832 0-60.784 28.115-60.784 28.115l.072 29.128h61.868v8.745H41.631S.145 61.355.145 126.77c0 65.417 36.21 63.097 36.21 63.097h21.61v-30.356s-1.165-36.21 35.632-36.21h61.362s34.475.557 34.475-33.319V33.97S194.67.072 126.916.072ZM92.802 19.66a11.12 11.12 0 0 1 11.13 11.13a11.12 11.12 0 0 1-11.13 11.13a11.12 11.12 0 0 1-11.13-11.13a11.12 11.12 0 0 1 11.13-11.13Z"/>
@@ -82,7 +82,7 @@ export function ReactIcon(props: SVGProps<SVGSVGElement>) {
 
 export function NextjsIcon(props: SVGProps<SVGSVGElement>) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" {...props}>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
         <path fill="#000000" d="m11.345 2.405l-.303.027c-2.84.256-5.501 1.789-7.187 4.144a9.9 9.9 0 0 0-1.765 4.37c-.08.548-.09.71-.09 1.455s.01.907.09 1.457c.543 3.755 3.216 6.91 6.84 8.079c.65.209 1.334.351 2.112.438c.303.033 1.613.033 1.916 0c1.343-.15 2.48-.481 3.603-1.054c.172-.088.205-.112.182-.131c-.016-.012-.749-.995-1.629-2.184l-1.599-2.16l-2.004-2.965a287 287 0 0 0-2.017-2.963c-.008-.002-.016 1.315-.02 2.924c-.006 2.817-.008 2.93-.043 2.997a.36.36 0 0 1-.172.178c-.063.03-.117.037-.412.037h-.339l-.09-.057a.4.4 0 0 1-.13-.143l-.042-.088l.004-3.919l.006-3.921l.06-.076a.5.5 0 0 1 .145-.12c.08-.039.112-.043.45-.043c.399 0 .465.016.569.13c.03.03 1.114 1.665 2.412 3.633l3.946 5.976l1.583 2.398l.08-.052c.71-.462 1.46-1.118 2.055-1.803a9.95 9.95 0 0 0 2.354-5.111c.08-.55.09-.712.09-1.457c0-.744-.01-.907-.09-1.456c-.543-3.755-3.216-6.91-6.84-8.079a10.5 10.5 0 0 0-2.083-.436c-.187-.02-1.48-.04-1.642-.025m4.094 6.048c.094.047.17.137.197.23c.016.051.02 1.138.016 3.587l-.006 3.515l-.62-.95l-.621-.95V11.33c0-1.652.008-2.58.02-2.625a.4.4 0 0 1 .193-.246c.08-.041.11-.045.416-.045c.29 0 .34.004.405.039"/>
     </svg>
   );
@@ -131,8 +131,44 @@ export function GoogleCloudIcon(props: SVGProps<SVGSVGElement>) {
 
 export function VSCodeIcon(props: SVGProps<SVGSVGElement>) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" {...props}>
-      <path d="M23.1,13.2l-5.6-5.6L23,2.1a.9.9,0,0,0-.9-1.5L16.4,1,10.8,6.5.6,1.2A.9.9,0,0,0,0,2.1L5.3,7.5.1,12.7a.9.9,0,0,0,.6,1.5l6.3.3,4.8,4.8,4.8-4.8,6.3-.3a.9.9,0,0,0,.6-1.5Zm-9.2-2.1L5,2.2,9.3,6.5Zm0,0,8.9-8.9L18.7,6.5Z" fill="#007ACC"/>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" {...props}>
+      <mask id="deviconVscode0" width="128" height="128" x="0" y="0" maskUnits="userSpaceOnUse" style={{maskType: 'alpha'}}>
+          <path fill="#fff" fill-rule="evenodd" d="M90.767 127.126a7.968 7.968 0 0 0 6.35-.244l26.353-12.681a8 8 0 0 0 4.53-7.209V21.009a8 8 0 0 0-4.53-7.21L97.117 1.12a7.97 7.97 0 0 0-9.093 1.548l-50.45 46.026L15.6 32.013a5.328 5.328 0 0 0-6.807.302l-7.048 6.411a5.335 5.335 0 0 0-.006 7.888L20.796 64L1.74 81.387a5.336 5.336 0 0 0 .006 7.887l7.048 6.411a5.327 5.327 0 0 0 6.807.303l21.974-16.68l50.45 46.025a7.96 7.96 0 0 0 2.743 1.793Zm5.252-92.183L57.74 64l38.28 29.058V34.943Z" clip-rule="evenodd"/>
+      </mask>
+      <g mask="url(#deviconVscode0)">
+          <path fill="#0065A9" d="M123.471 13.82L97.097 1.12A7.973 7.973 0 0 0 88 2.668L1.662 81.387a5.333 5.333 0 0 0 .006 7.887l7.052 6.411a5.333 5.333 0 0 0 6.811.303l103.971-78.875c3.488-2.646 8.498-.158 8.498 4.22v-.306a8.001 8.001 0 0 0-4.529-7.208Z"/>
+          <g filter="url(#deviconVscode1)">
+              <path fill="#007ACC" d="m123.471 114.181l-26.374 12.698A7.973 7.973 0 0 1 88 125.333L1.662 46.613a5.333 5.333 0 0 1 .006-7.887l7.052-6.411a5.333 5.333 0 0 1 6.811-.303l103.971 78.874c3.488 2.647 8.498.159 8.498-4.219v.306a8.001 8.001 0 0 1-4.529 7.208Z"/>
+          </g>
+          <g filter="url(#deviconVscode2)">
+              <path fill="#1F9CF0" d="M97.098 126.882A7.977 7.977 0 0 1 88 125.333c2.952 2.952 8 .861 8-3.314V5.98c0-4.175-5.048-6.266-8-3.313a7.977 7.977 0 0 1 9.098-1.549L123.467 13.8A8 8 0 0 1 128 21.01v85.982a8 8 0 0 1-4.533 7.21l-26.369 12.681Z"/>
+          </g>
+          <path fill="url(#deviconVscode3)" fill-rule="evenodd" d="M90.69 127.126a7.968 7.968 0 0 0 6.349-.244l26.353-12.681a8 8 0 0 0 4.53-7.21V21.009a8 8 0 0 0-4.53-7.21L97.039 1.12a7.97 7.97 0 0 0-9.093 1.548l-50.45 46.026l-21.974-16.68a5.328 5.328 0 0 0-6.807.302l-7.048 6.411a5.336 5.336 0 0 0-.006 7.888L20.718 64L1.662 81.386a5.335 5.335 0 0 0 .006 7.888l7.048 6.411a5.328 5.328 0 0 0 6.807.303l21.975-16.681l50.45 46.026a7.959 7.959 0 0 0 2.742 1.793Zm5.252-92.184L57.662 64l38.28 29.057V34.943Z" clip-rule="evenodd" opacity=".25"/>
+      </g>
+      <defs>
+          <filter id="deviconVscode1" width="144.744" height="113.408" x="-8.411" y="22.594" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+              <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+              <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+              <feOffset/>
+              <feGaussianBlur stdDeviation="4.167"/>
+              <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+              <feBlend in2="BackgroundImageFix" mode="overlay" result="effect1_dropShadow_1_36"/>
+              <feBlend in="SourceGraphic" in2="effect1_dropShadow_1_36" result="shape"/>
+          </filter>
+          <filter id="deviconVscode2" width="56.667" height="144.007" x="79.667" y="-8.004" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+              <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+              <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+              <feOffset/>
+              <feGaussianBlur stdDeviation="4.167"/>
+              <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+              <feBlend in2="BackgroundImageFix" mode="overlay" result="effect1_dropShadow_1_36"/>
+              <feBlend in="SourceGraphic" in2="effect1_dropShadow_1_36" result="shape"/>
+          </filter>
+          <linearGradient id="deviconVscode3" x1="63.922" x2="63.922" y1=".33" y2="127.67" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#fff"/>
+              <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+          </linearGradient>
+      </defs>
     </svg>
   );
 }
@@ -172,10 +208,17 @@ export function PromptEngineeringIcon(props: SVGProps<SVGSVGElement>) {
 
 export function TrelloIcon(props: SVGProps<SVGSVGElement>) {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" {...props}>
-            <rect width="7" height="12" x="2.5" y="6" fill="#0079bf" rx="1"/>
-            <rect width="7" height="9" x="14.5" y="6" fill="#0079bf" rx="1"/>
-        </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" {...props}>
+          <defs>
+              <linearGradient id="logosTrello0" x1="50%" x2="50%" y1="0%" y2="100%">
+                  <stop offset="0%" stop-color="#0091E6"/>
+                  <stop offset="100%" stop-color="#0079BF"/>
+              </linearGradient>
+          </defs>
+          <rect width="256" height="256" fill="url(#logosTrello0)" rx="25"/>
+          <rect width="78.08" height="112" x="144.64" y="33.28" fill="#FFF" rx="12"/>
+          <rect width="78.08" height="176" x="33.28" y="33.28" fill="#FFF" rx="12"/>
+      </svg>
     );
 }
 
