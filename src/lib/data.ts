@@ -30,6 +30,10 @@ import {
   PromptEngineeringIcon,
   TrelloIcon,
   GitHubIcon,
+  GoogleColabIcon,
+  OpenCvIcon,
+  HtmlIcon,
+  DockerIcon,
 } from "@/components/icons";
 
 export const PROJECTS = [
@@ -76,6 +80,8 @@ export const SKILLS = {
     { name: "Scikit-learn", icon: ScikitLearnIcon, description: "Applying classical machine learning algorithms for data analysis and predictive modeling." },
     { name: "AI Agents", icon: BrainCircuit, description: "Architecting autonomous agents that reason, plan, and execute complex tasks." },
     { name: "GenAI APIs", icon: GenAIIcon, description: "Integrating and fine-tuning large language models for novel applications." },
+    { name: "Google Colab", icon: GoogleColabIcon, description: "Leveraging cloud-based notebooks for collaborative and powerful ML experimentation."},
+    { name: "OpenCV", icon: OpenCvIcon, description: "Implementing real-time computer vision applications and image processing workflows."}
   ],
   "Programming": [
     { name: "Python", icon: PythonIcon, description: "Crafting robust backend systems, data pipelines, and AI-powered services." },
@@ -83,6 +89,7 @@ export const SKILLS = {
     { name: "React", icon: ReactIcon, description: "Building dynamic, component-based user interfaces with a focus on performance." },
     { name: "Next.js", icon: NextjsIcon, description: "Leveraging server-side rendering and static generation for optimal web experiences." },
     { name: "Flutter", icon: FlutterIcon, description: "Creating cross-platform mobile applications with a beautiful and native feel." },
+    { name: "HTML", icon: HtmlIcon, description: "Structuring web content with semantic and accessible markup." },
   ],
   "Data & Cloud": [
     { name: "MongoDB", icon: MongodbIcon, description: "Designing and managing flexible, high-performance NoSQL database schemas." },
@@ -94,6 +101,7 @@ export const SKILLS = {
     { name: "VS Code", icon: VSCodeIcon, description: "Optimizing development workflows with a highly customized and efficient code editor." },
     { name: "Prompt Engineering", icon: PromptEngineeringIcon, description: "Mastering the art of instructing AI models to achieve precise and creative outcomes." },
     { name: "Trello", icon: TrelloIcon, description: "Orchestrating project timelines and deliverables with agile methodologies." },
+    { name: "Docker", icon: DockerIcon, description: "Containerizing applications to ensure consistent environments from development to production." },
   ],
 };
 
