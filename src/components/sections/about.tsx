@@ -48,16 +48,13 @@ export default function About() {
 
         <div className="grid md:grid-cols-5 gap-12 items-start">
           <motion.div variants={itemVariants} className="md:col-span-2">
-            <div className="relative group">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-accent rounded-xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
-              <div className="relative aspect-[3/4] rounded-xl overflow-hidden bg-background p-1">
-                <Image
-                  src="/me.jpg"
-                  alt="About Praneeth P K"
-                  fill
-                  className="object-contain rounded-lg"
-                />
-              </div>
+            <div className="relative aspect-[3/4] rounded-xl overflow-hidden">
+              <Image
+                src="/me.jpg"
+                alt="About Praneeth P K"
+                fill
+                className="object-contain rounded-lg"
+              />
             </div>
           </motion.div>
 
