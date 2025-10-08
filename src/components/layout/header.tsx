@@ -18,63 +18,44 @@ const NAV_ITEMS = [
 export default function Header() {
   const [isSheetOpen, setSheetOpen] = useState(false);
 
-  const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
-    <a
-      href={href}
-      onClick={() => setSheetOpen(false)}
-      className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
-    >
-      {children}
-    </a>
-  );
-
   return (
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-white/10"
+      transition={{ type: "spring", stiffness: 100, damping: 20, delay: 1 }}
+      className="fixed top-6 left-1/2 -translate-x-1/2 z-50"
     >
-      <div className="relative flex items-center justify-between h-16 px-6 max-w-7xl mx-auto">
+      <div className="relative bg-background/60 backdrop-blur-lg rounded-full shadow-lg border border-white/10 px-4 py-2 flex items-center gap-4">
         <a href="#home" className="text-lg font-headline font-bold text-primary flex-shrink-0">
           Praneeth.AI
         </a>
-
+        <div className="h-6 w-px bg-white/10 hidden md:block" />
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-6">
           {NAV_ITEMS.map((item) => (
-            <NavLink key={item.name} href={item.href}>
+            <a
+              key={item.name}
+              href={item.href}
+              className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
+            >
               {item.name}
-            </NavLink>
+            </a>
           ))}
         </nav>
-        
-        <div className="hidden md:flex items-center gap-4">
-          <ThemeSwitch />
-        </div>
+        <ThemeSwitch />
 
         {/* Mobile Navigation */}
-        <div className="md:hidden flex items-center gap-2">
-          <ThemeSwitch />
+        <div className="md:hidden">
           <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
-                <Menu className="h-6 w-6" />
+                <Menu className="h-5 w-5" />
                 <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[280px] bg-background">
-              <div className="flex flex-col h-full p-4">
-                <div className="flex justify-between items-center mb-8">
-                  <a href="#home" className="text-lg font-headline font-bold text-primary" onClick={() => setSheetOpen(false)}>
-                    Praneeth.AI
-                  </a>
-                  <Button variant="ghost" size="icon" onClick={() => setSheetOpen(false)}>
-                    <X className="h-6 w-6" />
-                    <span className="sr-only">Close menu</span>
-                  </Button>
-                </div>
-                <nav className="flex flex-col gap-6 text-lg">
+            <SheetContent side="top" className="w-full bg-background/90 backdrop-blur-xl">
+              <div className="flex flex-col items-center p-8">
+                <nav className="flex flex-col items-center gap-6 text-lg">
                   {NAV_ITEMS.map((item) => (
                     <a
                       key={item.name}
@@ -86,8 +67,6 @@ export default function Header() {
                     </a>
                   ))}
                 </nav>
-                <div className="mt-auto">
-                </div>
               </div>
             </SheetContent>
           </Sheet>
