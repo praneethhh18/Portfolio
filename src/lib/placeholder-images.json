@@ -21,7 +21,7 @@
     {
       "id": "project-deepfake",
       "description": "Project image for DeepFake Anomaly Detection",
-      "imageUrl": "https://picsum.photos/seed/deepfake/600/400",
+      "imageUrl": "/deep.png",
       "imageHint": "ai face"
     },
     {
