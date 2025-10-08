@@ -48,7 +48,7 @@ export const PROJECTS = [
   {
     title: "SkillBridge AI",
     description: "An intelligent platform for skill gap analysis and personalized career path recommendations, helping youths to navigate their career development and path effectively.",
-    tech: ["NLP", "ML", "AI", "Ai agents", "React"],
+    tech: ["NLP", "ML", "AI", "Ai agents", "React", "TF-IDF", "Word2Vec", "BERT"],
     imageUrlId: "project-skillbridge-ai",
     githubUrl: "https://github.com/praneethhh18",
   },
