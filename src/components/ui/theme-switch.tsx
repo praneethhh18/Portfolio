@@ -4,24 +4,26 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 const ThemeSwitch = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  // Initialize state from a function to avoid running on the server.
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    if (typeof window === 'undefined') {
+      return false; // Default to light mode on the server
+    }
+    return document.documentElement.classList.contains('dark');
+  });
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
     setIsMounted(true);
-    const isDark = document.documentElement.classList.contains('dark');
-    setIsDarkMode(isDark);
   }, []);
 
   useEffect(() => {
-    if (isMounted) {
-        if (isDarkMode) {
-          document.documentElement.classList.add('dark');
-        } else {
-          document.documentElement.classList.remove('dark');
-        }
+    if (isDarkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
     }
-  }, [isDarkMode, isMounted]);
+  }, [isDarkMode]);
 
 
   const toggleTheme = () => {
@@ -29,7 +31,8 @@ const ThemeSwitch = () => {
   };
   
   if (!isMounted) {
-    return null; // Don't render anything on the server or during initial client render
+    // Render a placeholder or null on the server and initial client render
+    return <div style={{ width: '3.5em', height: '2em' }} />;
   }
 
   return (
