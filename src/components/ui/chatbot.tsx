@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from "react";
@@ -59,10 +60,19 @@ export function Chatbot() {
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger asChild>
         <motion.div
-          initial={{ scale: 0, rotate: -90 }}
-          animate={{ scale: 1, rotate: 0 }}
-          transition={{ duration: 0.5, delay: 1, type: "spring" }}
-          className="fixed bottom-6 right-6 z-50"
+          drag
+          dragConstraints={{
+            top: -250,
+            left: -350,
+            right: 350,
+            bottom: 250,
+          }}
+          whileHover={{ scale: 1.1, rotate: 15 }}
+          whileTap={{ scale: 0.9 }}
+          initial={{ scale: 0, y: 100, x: 100 }}
+          animate={{ scale: 1, y: 0, x: 0 }}
+          transition={{ duration: 0.5, delay: 1, type: "spring", stiffness: 120 }}
+          className="fixed bottom-6 right-6 z-50 cursor-grab"
         >
           <button className="loader">
             <Bot className="w-8 h-8 text-amber-400 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20" />
@@ -131,3 +141,4 @@ export function Chatbot() {
     </Sheet>
   );
 }
+
