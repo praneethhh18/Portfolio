@@ -57,7 +57,7 @@ export function ProjectCard({ project }: { project: Project }) {
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
-      className="relative h-full"
+      className="relative h-full w-full"
     >
       <div
         style={{ transform: "translateZ(50px)", transformStyle: "preserve-3d" }}
@@ -77,7 +77,7 @@ export function ProjectCard({ project }: { project: Project }) {
         </div>
         <div className="p-6 flex flex-col flex-1">
           <h3 className="text-xl font-bold font-headline mb-2">{project.title}</h3>
-          <p className="text-sm text-muted-foreground mb-4">{project.description}</p>
+          <p className="text-sm text-muted-foreground mb-4 flex-grow">{project.description}</p>
           <div className="flex flex-wrap gap-2 mt-auto">
             {project.tech.map((tag) => (
               <Badge key={tag} variant="secondary">{tag}</Badge>
