@@ -76,56 +76,57 @@ export default function Hero() {
         style={{ perspective: 1000 }}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
-        className="relative flex flex-col items-center text-center p-4 z-10"
+        className="relative flex flex-col items-center z-10"
       >
         <motion.div 
-            onMouseEnter={handleAvatarHover}
             style={{ transformStyle: "preserve-3d", rotateX, rotateY, transform: "translateZ(20px)" }}
-            className="w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-primary/50 shadow-2xl cursor-pointer"
+            className="bg-card/30 backdrop-blur-lg p-8 rounded-2xl border border-white/10 shadow-2xl flex flex-col items-center text-center"
         >
-            <Image
-              src="/me.jpg"
-              alt="Praneeth P K"
-              width={128}
-              height={128}
-              className="object-cover"
-              priority
-            />
-        </motion.div>
-        <motion.h1
-          style={{ transformStyle: "preserve-3d", rotateX, rotateY, transform: "translateZ(50px)" }}
-          className="text-4xl md:text-6xl font-headline font-bold bg-clip-text text-transparent bg-gradient-to-b from-foreground to-foreground/70"
-        >
-          Hi, I’m Praneeth P K
-        </motion.h1>
-        <motion.div
-          style={{ transformStyle: "preserve-3d", rotateX, rotateY, transform: "translateZ(40px)" }}
-          className="mt-4 text-lg md:text-xl max-w-2xl text-foreground/80 h-8"
-        >
-          <AnimatePresence mode="wait">
-            {isMounted && (
-              <motion.p
-                key={subtitleIndex}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 20 }}
-                transition={{ duration: 0.5 }}
-              >
-                {SUBTITLES[subtitleIndex]}
-              </motion.p>
-            )}
-          </AnimatePresence>
-        </motion.div>
-        <motion.div
-          style={{ transformStyle: "preserve-3d", rotateX, rotateY, transform: "translateZ(30px)" }}
-          className="mt-8 flex flex-col sm:flex-row gap-4 items-center"
-        >
-          <Button asChild size="lg" className="font-bold">
-            <a href="#projects">
-              View Projects <ArrowRight className="ml-2" />
-            </a>
-          </Button>
-          <SocialCard />
+            <motion.div 
+                onMouseEnter={handleAvatarHover}
+                className="w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-primary/50 shadow-lg cursor-pointer"
+            >
+                <Image
+                  src="/me.jpg"
+                  alt="Praneeth P K"
+                  width={128}
+                  height={128}
+                  className="object-cover"
+                  priority
+                />
+            </motion.div>
+            <motion.h1
+              className="text-4xl md:text-6xl font-headline font-bold bg-clip-text text-transparent bg-gradient-to-b from-foreground to-foreground/70"
+            >
+              Hi, I’m Praneeth P K
+            </motion.h1>
+            <motion.div
+              className="mt-4 text-lg md:text-xl max-w-2xl text-foreground/80 h-8"
+            >
+              <AnimatePresence mode="wait">
+                {isMounted && (
+                  <motion.p
+                    key={subtitleIndex}
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 20 }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    {SUBTITLES[subtitleIndex]}
+                  </motion.p>
+                )}
+              </AnimatePresence>
+            </motion.div>
+            <motion.div
+              className="mt-8 flex flex-col sm:flex-row gap-4 items-center"
+            >
+              <Button asChild size="lg" className="font-bold">
+                <a href="#projects">
+                  View Projects <ArrowRight className="ml-2" />
+                </a>
+              </Button>
+              <SocialCard />
+            </motion.div>
         </motion.div>
       </motion.div>
       <audio ref={audioRef} onEnded={() => setIsPlaying(false)} />
