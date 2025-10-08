@@ -7,6 +7,7 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState, useRef } from "react";
 import SocialCard from "@/components/ui/social-card";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 const SUBTITLES = [
     "AI Architect",
@@ -17,6 +18,9 @@ const SUBTITLES = [
 export default function Hero() {
     const [subtitleIndex, setSubtitleIndex] = useState(0);
     const [isMounted, setIsMounted] = useState(false);
+
+    const profileImage = PlaceHolderImages.find((img) => img.id === "profile-praneeth");
+
 
     useEffect(() => {
         setIsMounted(true);
@@ -64,14 +68,17 @@ export default function Hero() {
             <motion.div 
                 className="w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-primary/50 shadow-lg cursor-pointer"
             >
-                <Image
-                  src="/me.jpg"
-                  alt="Praneeth P K"
-                  width={128}
-                  height={128}
-                  className="object-cover"
-                  priority
-                />
+                {profileImage && (
+                    <Image
+                    src={profileImage.imageUrl}
+                    alt="Praneeth P K"
+                    width={128}
+                    height={128}
+                    className="object-cover w-full h-full"
+                    priority
+                    data-ai-hint={profileImage.imageHint}
+                    />
+                )}
             </motion.div>
             <motion.h1
               className="text-4xl md:text-6xl font-headline font-bold bg-clip-text text-transparent bg-gradient-to-b from-foreground to-foreground/70"

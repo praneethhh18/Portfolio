@@ -3,13 +3,13 @@
     {
       "id": "profile-praneeth",
       "description": "Profile photo of Praneeth P K",
-      "imageUrl": "https://picsum.photos/seed/praneeth-profile/200/200",
+      "imageUrl": "https://images.unsplash.com/photo-1599566150163-29194dcaad36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwZXJzb258ZW58MHx8fHwxNzU5NjExNTc4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "man portrait"
     },
     {
       "id": "about-praneeth",
       "description": "A professional photo of Praneeth for the about section",
-      "imageUrl": "https://picsum.photos/seed/praneeth-about/600/800",
+      "imageUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwZXJzb258ZW58MHx8fHwxNzU5NjExNTc4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "man working"
     },
     {
