@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -5,7 +6,6 @@ import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { TIMELINE, CERTIFICATIONS } from "@/lib/data";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -34,7 +34,6 @@ const timelineItemVariants = {
 }
 
 export default function About() {
-  const aboutImage = PlaceHolderImages.find((img) => img.id === "about-praneeth");
   return (
     <section id="about" className="py-24 sm:py-32">
       <motion.div
@@ -51,15 +50,12 @@ export default function About() {
         <div className="grid md:grid-cols-5 gap-12 items-start">
           <motion.div variants={itemVariants} className="md:col-span-2">
             <div className="relative aspect-[3/4] rounded-xl overflow-hidden">
-              {aboutImage && (
-                <Image
-                  src={aboutImage.imageUrl}
-                  alt="About Praneeth P K"
-                  fill
-                  className="object-cover rounded-lg"
-                  data-ai-hint={aboutImage.imageHint}
-                />
-              )}
+              <Image
+                src="/me.jpg"
+                alt="About Praneeth P K"
+                fill
+                className="object-cover rounded-lg"
+              />
             </div>
           </motion.div>
 
