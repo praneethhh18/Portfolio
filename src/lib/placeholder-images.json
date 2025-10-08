@@ -43,6 +43,12 @@
       "imageHint": "ecommerce interface"
     },
     {
+      "id": "project-loader",
+      "description": "Project animation for Rocket Loader",
+      "imageUrl": "",
+      "imageHint": "rocket moon"
+    },
+    {
       "id": "hero-background",
       "description": "Abstract background for hero section",
       "imageUrl": "https://picsum.photos/seed/hero-bg/1920/1080",

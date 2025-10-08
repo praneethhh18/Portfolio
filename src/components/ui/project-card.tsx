@@ -5,6 +5,7 @@ import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { Github } from "lucide-react";
 import { PlaceHolderImages, type ImagePlaceholder } from "@/lib/placeholder-images";
 import { Badge } from "@/components/ui/badge";
+import MoonLoader from "./moon-loader";
 
 type Project = {
   title: string;
@@ -64,14 +65,18 @@ export function ProjectCard({ project }: { project: Project }) {
         className="bg-card/50 border border-white/10 rounded-xl overflow-hidden shadow-lg group relative"
       >
         <div className="aspect-video relative">
-          {projectImage && (
-            <Image
-              src={projectImage.imageUrl}
-              alt={project.title}
-              fill
-              className="object-cover group-hover:scale-105 transition-transform duration-300"
-              data-ai-hint={projectImage.imageHint}
-            />
+          {project.imageUrlId === 'project-loader' ? (
+            <MoonLoader />
+          ) : (
+            projectImage && (
+              <Image
+                src={projectImage.imageUrl}
+                alt={project.title}
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-300"
+                data-ai-hint={projectImage.imageHint}
+              />
+            )
           )}
           <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent" />
         </div>
