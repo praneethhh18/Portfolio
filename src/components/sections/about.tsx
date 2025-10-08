@@ -48,7 +48,7 @@ export default function About() {
 
         <div className="grid md:grid-cols-5 gap-12 items-start">
           <motion.div variants={itemVariants} className="md:col-span-2">
-            <div className="aspect-[3/4] relative rounded-xl overflow-hidden shadow-2xl rotate-[-3deg] hover:rotate-0 transition-transform duration-300">
+            <div className="aspect-[3/4] relative rounded-xl overflow-hidden shadow-2xl rotate-[-3deg] hover:rotate-0 transition-transform duration-300 bg-background">
               <Image
                 src="/me.jpg"
                 alt="About Praneeth P K"
