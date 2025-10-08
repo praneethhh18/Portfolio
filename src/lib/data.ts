@@ -41,7 +41,7 @@ export const PROJECTS = [
   {
     title: "DeepFake Anomaly Detection",
     description: "An advanced AI model designed to identify, classify, and flag deepfake images in real time using unsupervised learning and anomaly detection techniques.",
-    tech: ["AI", "ML", "Python", "TensorFlow"],
+    tech: ["AI", "ML", "Python", "VGG16 CNN architecture", "One-Class SVM"],
     imageUrlId: "project-deepfake",
     githubUrl: "https://github.com/praneethhh18",
   },
