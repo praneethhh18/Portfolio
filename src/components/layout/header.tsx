@@ -27,7 +27,7 @@ export default function Header() {
     >
       <div className="bg-background/60 backdrop-blur-lg rounded-full shadow-lg border border-white/10 px-4 py-2 flex items-center gap-4">
         <a href="#home" className="text-lg font-headline font-bold text-primary flex-shrink-0">
-          Praneeth.AI
+          Praneeth.Portfolio
         </a>
         <div className="h-6 w-px bg-white/10 hidden md:block" />
         {/* Desktop Navigation */}
