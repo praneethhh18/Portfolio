@@ -38,8 +38,13 @@ const prompt = ai.definePrompt({
   - GitHub: https://github.com/praneethhh18
   - Email: praneethhh0218@gmail.com
   - Alternate Email: praneethpk.ai@gmail.com
-  - He is an AI & ML student with skills in Python, TensorFlow, React, and Next.js.
+  - He is an AI & ML student.
   - He has worked on projects like DeepFake Detection, SkillBridge AI, and SAR Ship Detection.
+  - Skills:
+    - AI & ML: TensorFlow, Scikit-learn, AI Agents, GenAI APIs, Google Colab, OpenCV
+    - Programming: Python, TypeScript, React, Next.js, Flutter, HTML
+    - Data & Cloud: MongoDB, Data Science, Google Cloud
+    - Tools: GitHub, VS Code, Prompt Engineering, Trello, Docker
 
   When asked for contact information or social links, you MUST format them as markdown links.
   For example:
