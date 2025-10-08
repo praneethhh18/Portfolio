@@ -5,8 +5,9 @@ import { motion, useMotionValue, useTransform, AnimatePresence } from "framer-mo
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import SocialCard from "@/components/ui/social-card";
+import { textToSpeech } from "@/ai/flows/text-to-speech";
 
 const SUBTITLES = [
     "AI Architect",
@@ -17,6 +18,8 @@ const SUBTITLES = [
 export default function Hero() {
     const [subtitleIndex, setSubtitleIndex] = useState(0);
     const [isMounted, setIsMounted] = useState(false);
+    const [isPlaying, setIsPlaying] = useState(false);
+    const audioRef = useRef<HTMLAudioElement | null>(null);
 
     useEffect(() => {
         setIsMounted(true);
@@ -46,6 +49,24 @@ export default function Hero() {
         y.set(0);
     };
 
+    const handleAvatarHover = async () => {
+        if (isPlaying || (audioRef.current && !audioRef.current.paused)) return;
+        setIsPlaying(true);
+        try {
+            const { audio } = await textToSpeech({ text: "Hello my friend" });
+            if (audioRef.current) {
+                audioRef.current.src = audio;
+                audioRef.current.play();
+            }
+        } catch (error) {
+            console.error("Error generating speech:", error);
+        } finally {
+            // A short delay before allowing another play to avoid spam
+            setTimeout(() => setIsPlaying(false), 1000);
+        }
+    };
+
+
   return (
     <section id="home" className="relative h-screen w-full flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0 animated-gradient" />
@@ -58,8 +79,9 @@ export default function Hero() {
         className="relative flex flex-col items-center text-center p-4 z-10"
       >
         <motion.div 
+            onMouseEnter={handleAvatarHover}
             style={{ transformStyle: "preserve-3d", rotateX, rotateY, transform: "translateZ(20px)" }}
-            className="w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-primary/50 shadow-2xl"
+            className="w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-primary/50 shadow-2xl cursor-pointer"
         >
             <Image
               src="/me.jpg"
@@ -106,6 +128,7 @@ export default function Hero() {
           <SocialCard />
         </motion.div>
       </motion.div>
+      <audio ref={audioRef} onEnded={() => setIsPlaying(false)} />
     </section>
   );
 }
