@@ -1,7 +1,6 @@
 import {
   BrainCircuit,
   Code,
-  Github,
   Instagram,
   Linkedin,
   Mail,
@@ -30,6 +29,7 @@ import {
   DataScienceIcon,
   PromptEngineeringIcon,
   TrelloIcon,
+  GitHubIcon,
 } from "@/components/icons";
 
 export const PROJECTS = [
@@ -90,7 +90,7 @@ export const SKILLS = {
     { name: "Google Cloud", icon: GoogleCloudIcon, description: "Deploying and scaling applications on a secure and reliable cloud infrastructure." },
   ],
   "Tools": [
-    { name: "GitHub", icon: Github, description: "Managing complex codebases and collaborating effectively with distributed teams." },
+    { name: "GitHub", icon: GitHubIcon, description: "Managing complex codebases and collaborating effectively with distributed teams." },
     { name: "VS Code", icon: VSCodeIcon, description: "Optimizing development workflows with a highly customized and efficient code editor." },
     { name: "Prompt Engineering", icon: PromptEngineeringIcon, description: "Mastering the art of instructing AI models to achieve precise and creative outcomes." },
     { name: "Trello", icon: TrelloIcon, description: "Orchestrating project timelines and deliverables with agile methodologies." },
@@ -166,7 +166,7 @@ export const SOCIAL_LINKS = [
   {
     name: "GitHub",
     url: "https://github.com/praneethhh18",
-    icon: Github,
+    icon: GitHubIcon,
   },
   {
     name: "Instagram",
