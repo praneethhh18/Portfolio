@@ -61,7 +61,7 @@ export const PROJECTS = [
   },
   {
     title: "Horizon DB",
-    description: "A custom-built, scalable database architecture optimized for handling large-scale AI and machine learning datasets with high efficiency and performance.",
+    description: "A custom-built, scalable database system for storing and analyzing human experiences, moods, and micro-stories using time-series and geospatial data.",
     tech: ["Database", "System Design", "Cloud"],
     imageUrlId: "project-horizon-db",
     githubUrl: "https://github.com/praneethhh18",
