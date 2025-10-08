@@ -4,10 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { TIMELINE, CERTIFICATIONS } from "@/lib/data";
-
-const aboutImage = PlaceHolderImages.find((img) => img.id === "about-praneeth");
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -52,15 +49,12 @@ export default function About() {
         <div className="grid md:grid-cols-5 gap-12 items-start">
           <motion.div variants={itemVariants} className="md:col-span-2">
             <div className="aspect-[3/4] relative rounded-xl overflow-hidden shadow-2xl rotate-[-3deg] hover:rotate-0 transition-transform duration-300">
-              {aboutImage && (
-                <Image
-                  src={aboutImage.imageUrl}
-                  alt="About Praneeth P K"
-                  fill
-                  className="object-cover"
-                  data-ai-hint={aboutImage.imageHint}
-                />
-              )}
+              <Image
+                src="/me.jpg"
+                alt="About Praneeth P K"
+                fill
+                className="object-cover"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent" />
             </div>
           </motion.div>
