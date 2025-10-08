@@ -43,12 +43,12 @@ export function PythonIcon(props: SVGProps<SVGSVGElement>) {
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 255" {...props}>
         <defs>
             <linearGradient id="logosPython0" x1="12.959%" x2="79.639%" y1="12.039%" y2="78.201%">
-                <stop offset="0%" stop-color="#387EB8"/>
-                <stop offset="100%" stop-color="#366994"/>
+                <stop offset="0%" stopColor="#387EB8"/>
+                <stop offset="100%" stopColor="#366994"/>
             </linearGradient>
             <linearGradient id="logosPython1" x1="19.128%" x2="90.742%" y1="20.579%" y2="88.429%">
-                <stop offset="0%" stop-color="#FFE052"/>
-                <stop offset="100%" stop-color="#FFC331"/>
+                <stop offset="0%" stopColor="#FFE052"/>
+                <stop offset="100%" stopColor="#FFC331"/>
             </linearGradient>
         </defs>
         <path fill="url(#logosPython0)" d="M126.916.072c-64.832 0-60.784 28.115-60.784 28.115l.072 29.128h61.868v8.745H41.631S.145 61.355.145 126.77c0 65.417 36.21 63.097 36.21 63.097h21.61v-30.356s-1.165-36.21 35.632-36.21h61.362s34.475.557 34.475-33.319V33.97S194.67.072 126.916.072ZM92.802 19.66a11.12 11.12 0 0 1 11.13 11.13a11.12 11.12 0 0 1-11.13 11.13a11.12 11.12 0 0 1-11.13-11.13a11.12 11.12 0 0 1 11.13-11.13Z"/>
@@ -94,13 +94,13 @@ export function FlutterIcon(props: SVGProps<SVGSVGElement>) {
         <defs>
             <linearGradient id="logosFlutter0" x1="3.952%" x2="75.897%" y1="26.993%" y2="52.919%">
                 <stop offset="0%"/>
-                <stop offset="100%" stop-opacity="0"/>
+                <stop offset="100%" stopOpacity="0"/>
             </linearGradient>
         </defs>
         <path fill="#47C5FB" d="M157.666.001L.001 157.666l48.8 48.8L255.268.001zm-1.099 145.396l-84.418 84.418l48.984 49.716l48.71-48.71l85.425-85.424z"/>
         <path fill="#00569E" d="m121.133 279.531l37.082 37.082h97.052l-85.425-85.792z"/>
         <path fill="#00B5F8" d="m71.6 230.364l48.801-48.801l49.441 49.258l-48.709 48.71z"/>
-        <path fill="url(#logosFlutter0)" fill-opacity=".8" d="m121.133 279.531l40.56-13.459l4.029-31.131z"/>
+        <path fill="url(#logosFlutter0)" fillOpacity=".8" d="m121.133 279.531l40.56-13.459l4.029-31.131z"/>
     </svg>
   );
 }
@@ -133,7 +133,7 @@ export function VSCodeIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" {...props}>
       <mask id="deviconVscode0" width="128" height="128" x="0" y="0" maskUnits="userSpaceOnUse" style={{maskType: 'alpha'}}>
-          <path fill="#fff" fill-rule="evenodd" d="M90.767 127.126a7.968 7.968 0 0 0 6.35-.244l26.353-12.681a8 8 0 0 0 4.53-7.209V21.009a8 8 0 0 0-4.53-7.21L97.117 1.12a7.97 7.97 0 0 0-9.093 1.548l-50.45 46.026L15.6 32.013a5.328 5.328 0 0 0-6.807.302l-7.048 6.411a5.335 5.335 0 0 0-.006 7.888L20.796 64L1.74 81.387a5.336 5.336 0 0 0 .006 7.887l7.048 6.411a5.327 5.327 0 0 0 6.807.303l21.974-16.68l50.45 46.025a7.96 7.96 0 0 0 2.743 1.793Zm5.252-92.183L57.74 64l38.28 29.058V34.943Z" clip-rule="evenodd"/>
+          <path fill="#fff" fillRule="evenodd" d="M90.767 127.126a7.968 7.968 0 0 0 6.35-.244l26.353-12.681a8 8 0 0 0 4.53-7.209V21.009a8 8 0 0 0-4.53-7.21L97.117 1.12a7.97 7.97 0 0 0-9.093 1.548l-50.45 46.026L15.6 32.013a5.328 5.328 0 0 0-6.807.302l-7.048 6.411a5.335 5.335 0 0 0-.006 7.888L20.796 64L1.74 81.387a5.336 5.336 0 0 0 .006 7.887l7.048 6.411a5.327 5.327 0 0 0 6.807.303l21.974-16.68l50.45 46.025a7.96 7.96 0 0 0 2.743 1.793Zm5.252-92.183L57.74 64l38.28 29.058V34.943Z" clipRule="evenodd"/>
       </mask>
       <g mask="url(#deviconVscode0)">
           <path fill="#0065A9" d="M123.471 13.82L97.097 1.12A7.973 7.973 0 0 0 88 2.668L1.662 81.387a5.333 5.333 0 0 0 .006 7.887l7.052 6.411a5.333 5.333 0 0 0 6.811.303l103.971-78.875c3.488-2.646 8.498-.158 8.498 4.22v-.306a8.001 8.001 0 0 0-4.529-7.208Z"/>
@@ -143,11 +143,11 @@ export function VSCodeIcon(props: SVGProps<SVGSVGElement>) {
           <g filter="url(#deviconVscode2)">
               <path fill="#1F9CF0" d="M97.098 126.882A7.977 7.977 0 0 1 88 125.333c2.952 2.952 8 .861 8-3.314V5.98c0-4.175-5.048-6.266-8-3.313a7.977 7.977 0 0 1 9.098-1.549L123.467 13.8A8 8 0 0 1 128 21.01v85.982a8 8 0 0 1-4.533 7.21l-26.369 12.681Z"/>
           </g>
-          <path fill="url(#deviconVscode3)" fill-rule="evenodd" d="M90.69 127.126a7.968 7.968 0 0 0 6.349-.244l26.353-12.681a8 8 0 0 0 4.53-7.21V21.009a8 8 0 0 0-4.53-7.21L97.039 1.12a7.97 7.97 0 0 0-9.093 1.548l-50.45 46.026l-21.974-16.68a5.328 5.328 0 0 0-6.807.302l-7.048 6.411a5.336 5.336 0 0 0-.006 7.888L20.718 64L1.662 81.386a5.335 5.335 0 0 0 .006 7.888l7.048 6.411a5.328 5.328 0 0 0 6.807.303l21.975-16.681l50.45 46.026a7.959 7.959 0 0 0 2.742 1.793Zm5.252-92.184L57.662 64l38.28 29.057V34.943Z" clip-rule="evenodd" opacity=".25"/>
+          <path fill="url(#deviconVscode3)" fillRule="evenodd" d="M90.69 127.126a7.968 7.968 0 0 0 6.349-.244l26.353-12.681a8 8 0 0 0 4.53-7.21V21.009a8 8 0 0 0-4.53-7.21L97.039 1.12a7.97 7.97 0 0 0-9.093 1.548l-50.45 46.026l-21.974-16.68a5.328 5.328 0 0 0-6.807.302l-7.048 6.411a5.336 5.336 0 0 0-.006 7.888L20.718 64L1.662 81.386a5.335 5.335 0 0 0 .006 7.888l7.048 6.411a5.328 5.328 0 0 0 6.807.303l21.975-16.681l50.45 46.026a7.959 7.959 0 0 0 2.742 1.793Zm5.252-92.184L57.662 64l38.28 29.057V34.943Z" clipRule="evenodd" opacity=".25"/>
       </g>
       <defs>
-          <filter id="deviconVscode1" width="144.744" height="113.408" x="-8.411" y="22.594" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
-              <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+          <filter id="deviconVscode1" width="144.744" height="113.408" x="-8.411" y="22.594" colorInterpolationFilters="sRGB" filterUnits="userSpaceOnUse">
+              <feFlood floodOpacity="0" result="BackgroundImageFix"/>
               <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
               <feOffset/>
               <feGaussianBlur stdDeviation="4.167"/>
@@ -155,8 +155,8 @@ export function VSCodeIcon(props: SVGProps<SVGSVGElement>) {
               <feBlend in2="BackgroundImageFix" mode="overlay" result="effect1_dropShadow_1_36"/>
               <feBlend in="SourceGraphic" in2="effect1_dropShadow_1_36" result="shape"/>
           </filter>
-          <filter id="deviconVscode2" width="56.667" height="144.007" x="79.667" y="-8.004" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
-              <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+          <filter id="deviconVscode2" width="56.667" height="144.007" x="79.667" y="-8.004" colorInterpolationFilters="sRGB" filterUnits="userSpaceOnUse">
+              <feFlood floodOpacity="0" result="BackgroundImageFix"/>
               <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
               <feOffset/>
               <feGaussianBlur stdDeviation="4.167"/>
@@ -165,8 +165,8 @@ export function VSCodeIcon(props: SVGProps<SVGSVGElement>) {
               <feBlend in="SourceGraphic" in2="effect1_dropShadow_1_36" result="shape"/>
           </filter>
           <linearGradient id="deviconVscode3" x1="63.922" x2="63.922" y1=".33" y2="127.67" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#fff"/>
-              <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+              <stop stopColor="#fff"/>
+              <stop offset="1" stopColor="#fff" stopOpacity="0"/>
           </linearGradient>
       </defs>
     </svg>
@@ -211,8 +211,8 @@ export function TrelloIcon(props: SVGProps<SVGSVGElement>) {
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" {...props}>
           <defs>
               <linearGradient id="logosTrello0" x1="50%" x2="50%" y1="0%" y2="100%">
-                  <stop offset="0%" stop-color="#0091E6"/>
-                  <stop offset="100%" stop-color="#0079BF"/>
+                  <stop offset="0%" stopColor="#0091E6"/>
+                  <stop offset="100%" stopColor="#0079BF"/>
               </linearGradient>
           </defs>
           <rect width="256" height="256" fill="url(#logosTrello0)" rx="25"/>
