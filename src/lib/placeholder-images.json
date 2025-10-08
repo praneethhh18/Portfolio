@@ -3,7 +3,7 @@
     {
       "id": "profile-praneeth",
       "description": "Profile photo of Praneeth P K",
-      "imageUrl": "/car.jpg",
+      "imageUrl": "/car2.jpg",
       "imageHint": "man portrait"
     },
     {
@@ -15,7 +15,7 @@
     {
       "id": "project-horizon-db",
       "description": "Project image for Horizon DB",
-      "imageUrl": "https://picsum.photos/seed/horizon-db/600/400",
+      "imageUrl": "/horizon.png",
       "imageHint": "database technology"
     },
     {
