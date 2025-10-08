@@ -3,13 +3,13 @@
     {
       "id": "profile-praneeth",
       "description": "Profile photo of Praneeth P K",
-      "imageUrl": "https://images.unsplash.com/photo-1599566150163-29194dcaad36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwZXJzb258ZW58MHx8fHwxNzU5NjExNTc4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/car.jpg",
       "imageHint": "man portrait"
     },
     {
       "id": "about-praneeth",
       "description": "A professional photo of Praneeth for the about section",
-      "imageUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwZXJzb258ZW58MHx8fHwxNzU5NjExNTc4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/me.jpg",
       "imageHint": "man working"
     },
     {
@@ -33,7 +33,7 @@
     {
       "id": "project-skillbridge-ai",
       "description": "Project image for SkillBridge AI",
-      "imageUrl": "https://images.unsplash.com/photo-1758520144555-af04bf9ad3e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2FyZWVyJTIwcGF0aHxlbnwwfHx8fDE3NTk3ODMwMjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/carrer.png",
       "imageHint": "career path"
     },
     {
