@@ -55,7 +55,7 @@ export const PROJECTS = [
   {
     title: "SAR Ship Detection",
     description: "An advanced AI model designed to detect and localize ships in SAR imagery in real time using deep learning and image preprocessing techniques.",
-    tech: ["Data Science", "Computer Vision", "Python"],
+    tech: ["DL", "ML", "CNN", "image processing", "YOLO V6"],
     imageUrlId: "project-sar-ship",
     githubUrl: "https://github.com/praneethhh18",
   },
