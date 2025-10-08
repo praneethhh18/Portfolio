@@ -53,7 +53,7 @@ export default function About() {
                 src="/me.jpg"
                 alt="About Praneeth P K"
                 fill
-                className="object-cover object-top"
+                className="object-contain"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent" />
             </div>
