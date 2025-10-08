@@ -1,16 +1,13 @@
 import {
   BrainCircuit,
   Code,
-  Database,
   Github,
   Instagram,
   Linkedin,
   Mail,
-  PencilRuler,
   Rocket,
   Server,
   Smartphone,
-  Trello,
   Briefcase,
   GraduationCap,
   DraftingCompass,
@@ -28,7 +25,11 @@ import {
   FlutterIcon,
   MongodbIcon,
   GoogleCloudIcon,
-  VSCodeIcon
+  VSCodeIcon,
+  GenAIIcon,
+  DataScienceIcon,
+  PromptEngineeringIcon,
+  TrelloIcon,
 } from "@/components/icons";
 
 export const PROJECTS = [
@@ -74,7 +75,7 @@ export const SKILLS = {
     { name: "TensorFlow", icon: TensorFlowIcon, description: "Building and training production-grade neural networks and machine learning models." },
     { name: "Scikit-learn", icon: ScikitLearnIcon, description: "Applying classical machine learning algorithms for data analysis and predictive modeling." },
     { name: "AI Agents", icon: BrainCircuit, description: "Architecting autonomous agents that reason, plan, and execute complex tasks." },
-    { name: "GenAI APIs", icon: BrainCircuit, description: "Integrating and fine-tuning large language models for novel applications." },
+    { name: "GenAI APIs", icon: GenAIIcon, description: "Integrating and fine-tuning large language models for novel applications." },
   ],
   "Programming": [
     { name: "Python", icon: PythonIcon, description: "Crafting robust backend systems, data pipelines, and AI-powered services." },
@@ -85,14 +86,14 @@ export const SKILLS = {
   ],
   "Data & Cloud": [
     { name: "MongoDB", icon: MongodbIcon, description: "Designing and managing flexible, high-performance NoSQL database schemas." },
-    { name: "Data Science", icon: Database, description: "Transforming raw data into actionable insights through statistical analysis and visualization." },
+    { name: "Data Science", icon: DataScienceIcon, description: "Transforming raw data into actionable insights through statistical analysis and visualization." },
     { name: "Google Cloud", icon: GoogleCloudIcon, description: "Deploying and scaling applications on a secure and reliable cloud infrastructure." },
   ],
   "Tools": [
     { name: "GitHub", icon: Github, description: "Managing complex codebases and collaborating effectively with distributed teams." },
     { name: "VS Code", icon: VSCodeIcon, description: "Optimizing development workflows with a highly customized and efficient code editor." },
-    { name: "Prompt Engineering", icon: PencilRuler, description: "Mastering the art of instructing AI models to achieve precise and creative outcomes." },
-    { name: "Trello", icon: Trello, description: "Orchestrating project timelines and deliverables with agile methodologies." },
+    { name: "Prompt Engineering", icon: PromptEngineeringIcon, description: "Mastering the art of instructing AI models to achieve precise and creative outcomes." },
+    { name: "Trello", icon: TrelloIcon, description: "Orchestrating project timelines and deliverables with agile methodologies." },
   ],
 };
 

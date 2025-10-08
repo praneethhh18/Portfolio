@@ -20,10 +20,10 @@ export function WhatsAppIcon(props: SVGProps<SVGSVGElement>) {
 export function TensorFlowIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" {...props}>
-      <path d="M12.12,4.06,7.2,7.21V9.52L9.58,11,12,9.65,14.42,11,16.8,9.52V7.21L11.88,4.06ZM12,4.94l2.81,1.62v3.25l-2.81,1.62-2.81-1.62V6.56Z" />
-      <path d="M11,9.58,9.52,7.2,4.06,10.25v3.5L7.21,12,9.52,14.42,11,12.06v-2.48Z" />
-      <path d="M13,9.58,14.48,7.2,19.94,10.25v3.5L16.79,12,14.48,14.42,13,12.06v-2.48Z" />
-      <path d="M12,14.35,9.58,13,7.2,14.48v2.3L11.88,19.94l4.92-2.85v-2.3L14.42,13Z" />
+      <path d="M12.12,4.06,7.2,7.21V9.52L9.58,11,12,9.65,14.42,11,16.8,9.52V7.21L11.88,4.06ZM12,4.94l2.81,1.62v3.25l-2.81,1.62-2.81-1.62V6.56Z" fill="#FF6F00" />
+      <path d="M11,9.58,9.52,7.2,4.06,10.25v3.5L7.21,12,9.52,14.42,11,12.06v-2.48Z" fill="#FFC107" />
+      <path d="M13,9.58,14.48,7.2,19.94,10.25v3.5L16.79,12,14.48,14.42,13,12.06v-2.48Z" fill="#FFA000" />
+      <path d="M12,14.35,9.58,13,7.2,14.48v2.3L11.88,19.94l4.92-2.85v-2.3L14.42,13Z" fill="#FF8F00" />
     </svg>
   );
 }
@@ -32,7 +32,7 @@ export function ScikitLearnIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" {...props}>
       <path d="M12.06,2.62A3.2,3.2,0,0,0,8.87,5.81V9.43a3.2,3.2,0,0,0,6.38,0V5.81A3.2,3.2,0,0,0,12.06,2.62Z" fill="#f89939"/>
-      <path d="M19.16,6.77a3.2,3.2,0,0,0-3.19,3.19v5.86a3.2,3.2,0,0,0,6.38,0V10A3.2,3.2,0,0,0,19.16,6.77Z" fill="#59a9db"/>
+      <path d="M19.16,6.77a3.2,3.2,0,0,0-3.19,3.19v5.86a3.2,3.2,0,0,0,6.38,0V10A3.2,3.2,0,0,0,19.16,6.77Z" fill="#30a2da"/>
       <path d="M4.84,6.77a3.2,3.2,0,0,0,0,6.38h5.86a3.2,3.2,0,0,0,0-6.38Z" fill="#67a346"/>
     </svg>
   );
@@ -41,7 +41,7 @@ export function ScikitLearnIcon(props: SVGProps<SVGSVGElement>) {
 export function PythonIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" {...props}>
-      <path d="M14.5,14.07a2.59,2.59,0,0,1-2.59-2.59V9.93H10.36v1.55a2.59,2.59,0,0,1-2.59,2.59H6.22V11.5a2.59,2.,0,0,1,2.59-2.59h3.64V7.36H9.93a2.59,2.59,0,0,1-2.59-2.59V3.22h5.18v1.55a2.59,2.59,0,0,1,2.59,2.59h1.55V6.22a2.59,2.59,0,0,1-2.59-2.59V2.07h3.64A2.59,2.59,0,0,1,22.3,4.66v3.64h-1.55a2.59,2.59,0,0,1-2.59-2.59V4.17h-1.5v1.59a2.59,2.59,0,0,1-2.59,2.59Z" fill="#306998"/>
+      <path d="M14.5,14.07a2.59,2.59,0,0,1-2.59-2.59V9.93H10.36v1.55a2.59,2.59,0,0,1-2.59,2.59H6.22V11.5a2.59,2.59,0,0,1,2.59-2.59h3.64V7.36H9.93a2.59,2.59,0,0,1-2.59-2.59V3.22h5.18v1.55a2.59,2.59,0,0,1,2.59,2.59h1.55V6.22a2.59,2.59,0,0,1-2.59-2.59V2.07h3.64A2.59,2.59,0,0,1,22.3,4.66v3.64h-1.55a2.59,2.59,0,0,1-2.59-2.59V4.17h-1.5v1.59a2.59,2.59,0,0,1-2.59,2.59Z" fill="#306998"/>
       <path d="M9.5,9.93a2.59,2.59,0,0,1,2.59,2.59v1.55h1.55V12.52a2.59,2.59,0,0,1,2.59-2.59h1.55v2.59a2.59,2.59,0,0,1-2.59,2.59H11.54v1.55h2.59A2.59,2.59,0,0,1,16.72,18v1.55h5.18V16.9a2.59,2.59,0,0,1-2.59-2.59V12.76h-1.55A2.59,2.59,0,0,1,15,15.35v1.55h-1.5V14.31a2.59,2.59,0,0,1,2.59-2.59h2.59V8.08a2.59,2.59,0,0,1,2.59-2.59H22.3v3.64h-1.55a2.59,2.59,0,0,1-2.59,2.59Z" fill="#ffd43b"/>
     </svg>
   );
@@ -49,30 +49,31 @@ export function PythonIcon(props: SVGProps<SVGSVGElement>) {
 
 export function TypeScriptIcon(props: SVGProps<SVGSVGElement>) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" {...props}>
-      <path d="M1.5,1.5v21h21v-21h-21z M16.713,10.492h-4.398V20.55h-2.99V10.492H5.166V7.785h11.547V10.492z" fill="#007acc"/>
-      <polygon points="16.713,7.785 16.713,10.492 12.314,10.492 12.314,20.55 9.324,20.55 9.324,10.492 5.166,10.492 5.166,7.785 " fill="#ffffff"/>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="currentColor" {...props}>
+      <path fill="#007acc" d="M24,24H0V0h24V24z"/>
+      <path fill="#fff" d="M21.9,15.7h-4.4V5.6h2.9v7.2h1.5V5.6h2.9v13h-2.9V15.7z"/>
     </svg>
   );
 }
 
 export function ReactIcon(props: SVGProps<SVGSVGElement>) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" {...props}>
-      <circle cx="12" cy="12" r="2" fill="#61dafb"/>
-      <g stroke="#61dafb" strokeWidth="1" fill="none">
-        <ellipse cx="12" cy="12" rx="11" ry="4.2"/>
-        <ellipse cx="12" cy="12" rx="11" ry="4.2" transform="rotate(60 12 12)"/>
-        <ellipse cx="12" cy="12" rx="11" ry="4.2" transform="rotate(120 12 12)"/>
-      </g>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-11.5 -10.23174 23 20.46348" fill="currentColor" {...props}>
+        <title>React Logo</title>
+        <circle cx="0" cy="0" r="2.05" fill="#61dafb"/>
+        <g stroke="#61dafb" strokeWidth="1" fill="none">
+            <ellipse rx="11" ry="4.2"/>
+            <ellipse rx="11" ry="4.2" transform="rotate(60)"/>
+            <ellipse rx="11" ry="4.2" transform="rotate(120)"/>
+        </g>
     </svg>
   );
 }
 
 export function NextjsIcon(props: SVGProps<SVGSVGElement>) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" {...props}>
-      <path d="M14.54,3.3l-3.2,5.55,6.06,10.5H23ZM9.46,20.7,18.52,5.2,16.8,2.5H7.2L2,12l7.46,8.7Z"/>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="currentColor" {...props}>
+      <path fillRule="evenodd" clipRule="evenodd" d="M64 128C99.3462 128 128 99.3462 128 64C128 28.6538 99.3462 0 64 0C28.6538 0 0 28.6538 0 64C0 99.3462 28.6538 128 64 128ZM95.3211 41.4833C95.3211 40.4853 94.618 39.7346 93.6829 39.697C93.6156 39.697 93.5483 39.697 93.481 39.697H71.9537L48.1678 86.8644H58.443L63.5042 76.5892L82.1643 76.5892L69.839 100.916C68.9039 102.486 70.0886 104.382 71.9537 104.382C73.0711 104.382 74.0732 103.878 74.68 103.001L104.493 52.5833C105.167 51.5853 104.629 50.1806 103.444 49.4446L96.2201 44.7578C95.6826 44.4321 95.3884 43.8741 95.3884 43.2488V41.4833L95.3211 41.4833Z" />
     </svg>
   );
 }
@@ -87,8 +88,8 @@ export function FlutterIcon(props: SVGProps<SVGSVGElement>) {
 
 export function MongodbIcon(props: SVGProps<SVGSVGElement>) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" {...props}>
-      <path d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10S17.52,2,12,2z M13.9,18.2C13,18.7,12,18.9,11.2,18.9 c-1.5,0-2.8-0.6-3.8-1.8c-1.3-1.6-1.5-3.8-0.6-6c0.9-2.2,3.1-3.6,5.4-3.6c0.5,0,0.9,0.1,1.3,0.2c-0.1,0.2-0.2,0.4-0.3,0.6 c-0.6-0.3-1.3-0.5-2.1-0.5c-2.4,0-4.4,1.9-4.4,4.4s1.9,4.4,4.4,4.4c0.8,0,1.6-0.3,2.2-0.7L13.9,18.2z" fill="#47a248"/>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+      <path d="M12,2A10,10,0,0,0,2,12a10,10,0,0,0,10,10,10,10,0,0,0,10-10A10,10,0,0,0,12,2Zm1.9,16.2c-0.9.5-1.9.7-2.7.7a9.3,9.3,0,0,1-4.2-1.1,8.3,8.3,0,0,1-2.9-3.2A11.4,11.4,0,0,1,5,12a11.4,11.4,0,0,1,.9-2.6,8.3,8.3,0,0,1,2.9-3.2,9.3,9.3,0,0,1,4.2-1.1c0.5,0,0.9.1,1.3.2-0.1.2-0.2.4-0.3.6a3.6,3.6,0,0,0-2.1-0.5A5.4,5.4,0,0,0,7.7,12a5.4,5.4,0,0,0,4.4,5.3,4.5,4.5,0,0,0,2.2-0.7l0.6,1.6Z" fill="#00684A"/>
     </svg>
   );
 }
@@ -110,4 +111,46 @@ export function VSCodeIcon(props: SVGProps<SVGSVGElement>) {
       <path d="M23.1,13.2l-5.6-5.6L23,2.1a.9.9,0,0,0-.9-1.5L16.4,1,10.8,6.5.6,1.2A.9.9,0,0,0,0,2.1L5.3,7.5.1,12.7a.9.9,0,0,0,.6,1.5l6.3.3,4.8,4.8,4.8-4.8,6.3-.3a.9.9,0,0,0,.6-1.5Zm-9.2-2.1L5,2.2,9.3,6.5Zm0,0,8.9-8.9L18.7,6.5Z" fill="#007ACC"/>
     </svg>
   );
+}
+
+export function GenAIIcon(props: SVGProps<SVGSVGElement>) {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+            <path d="M9 10V9c0-2.8 2.2-5 5-5s5 2.2 5 5v1" />
+            <path d="M12 15v-1" />
+            <path d="M12 11V9" />
+            <path d="M12 18a6 6 0 0 0 6-6h-4.5a1.5 1.5 0 0 1 0-3H18a6 6 0 0 0-5.2-6" />
+            <path d="M3.8 13a10.3 10.3 0 0 0 4.4 5.2" />
+            <path d="M9.2 6.8A10.3 10.3 0 0 1 14 3.8" />
+        </svg>
+    );
+}
+
+export function DataScienceIcon(props: SVGProps<SVGSVGElement>) {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+            <ellipse cx="12" cy="5" rx="9" ry="3" />
+            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+        </svg>
+    );
+}
+
+export function PromptEngineeringIcon(props: SVGProps<SVGSVGElement>) {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
+            <path d="m4 13.5 4-4 4 4" />
+            <path d="m4 8.5 4-4 4 4" />
+        </svg>
+    );
+}
+
+export function TrelloIcon(props: SVGProps<SVGSVGElement>) {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" {...props}>
+            <rect width="7" height="12" x="2.5" y="6" fill="#0079bf" rx="1"/>
+            <rect width="7" height="9" x="14.5" y="6" fill="#0079bf" rx="1"/>
+        </svg>
+    );
 }
