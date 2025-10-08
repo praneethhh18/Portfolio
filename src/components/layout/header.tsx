@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -14,6 +14,40 @@ const NAV_ITEMS = [
   { name: "Projects", href: "#projects" },
   { name: "Services", href: "#services" },
 ];
+
+const NavLink = ({ name, href }: { name: string; href: string }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <motion.a
+      href={href}
+      onHoverStart={() => setIsHovered(true)}
+      onHoverEnd={() => setIsHovered(false)}
+      className="relative text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
+    >
+      <motion.span
+        animate={{ y: isHovered ? -2 : 0 }}
+        transition={{ duration: 0.2 }}
+        className="inline-block"
+      >
+        {name}
+      </motion.span>
+      <AnimatePresence>
+        {isHovered && (
+          <motion.div
+            layoutId={`underline-${name}`}
+            initial={{ width: 0 }}
+            animate={{ width: "100%" }}
+            exit={{ width: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="absolute bottom-0 left-0 h-0.5 bg-primary"
+          />
+        )}
+      </AnimatePresence>
+    </motion.a>
+  );
+};
+
 
 export default function Header() {
   const [isSheetOpen, setSheetOpen] = useState(false);
@@ -33,13 +67,7 @@ export default function Header() {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-6">
           {NAV_ITEMS.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
-            >
-              {item.name}
-            </a>
+            <NavLink key={item.name} name={item.name} href={item.href} />
           ))}
         </nav>
         <ThemeSwitch />
