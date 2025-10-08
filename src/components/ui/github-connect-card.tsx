@@ -36,7 +36,7 @@ const StyledWrapper = styled.div`
 
   .light-button button.bt {
     position: relative;
-    height: 200px;
+    height: 250px;
     display: flex;
     align-items: flex-end;
     outline: none;
@@ -50,8 +50,8 @@ const StyledWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100px;
-    width: 100px;
+    height: 120px;
+    width: 120px;
     background-color: #0a0a0a;
     border-radius: 5px;
     color: #0f0f0f;
@@ -62,7 +62,7 @@ const StyledWrapper = styled.div`
   }
 
   .light-button button.bt .button-holder svg {
-    height: 50px;
+    height: 60px;
     fill: #0f0f0f;
     transition: 300ms;
   }
@@ -74,8 +74,8 @@ const StyledWrapper = styled.div`
 
   .light-button button.bt .light-holder {
     position: absolute;
-    height: 200px;
-    width: 100px;
+    height: 250px;
+    width: 120px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -84,18 +84,18 @@ const StyledWrapper = styled.div`
   .light-button button.bt .light-holder .dot {
     position: absolute;
     top: 0;
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     background-color: #0a0a0a;
-    border-radius: 10px;
+    border-radius: 12px;
     z-index: 2;
   }
 
   .light-button button.bt .light-holder .light {
     position: absolute;
     top: 0;
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     clip-path: polygon(50% 0%, 25% 100%, 75% 100%);
     background: transparent;
   }
