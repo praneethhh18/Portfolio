@@ -1,7 +1,6 @@
 "use client";
 
-import { useActionState } from "react";
-import { useFormStatus } from "react-dom";
+import { useState, useRef, type FormEvent } from "react";
 import { motion } from "framer-motion";
 import { Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -9,34 +8,54 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { submitContactForm } from "@/app/actions";
 import { SOCIAL_LINKS } from "@/lib/data";
-import { useEffect } from "react";
-
-function SubmitButton() {
-  const { pending } = useFormStatus();
-  return (
-    <Button type="submit" size="lg" className="w-full font-bold" disabled={pending}>
-      {pending ? "Sending..." : "Send Message"}
-      <Send className="ml-2 h-4 w-4" />
-    </Button>
-  );
-}
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
   const { toast } = useToast();
-  const initialState = { message: null, errors: {} };
-  const [state, dispatch] = useActionState(submitContactForm, initialState);
+  const form = useRef<HTMLFormElement>(null);
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
-  useEffect(() => {
-    if (state.message) {
+  const sendEmail = async (e: FormEvent) => {
+    e.preventDefault();
+    if (!form.current) return;
+
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
       toast({
-        title: state.message.startsWith("Error:") ? "Error" : "Success!",
-        description: state.message,
-        variant: state.message.startsWith("Error:") ? "destructive" : "default",
+        title: "Error",
+        description: "EmailJS credentials are not configured. Please contact the site administrator.",
+        variant: "destructive",
       });
+      setStatus("error");
+      return;
     }
-  }, [state, toast]);
+
+    setStatus("sending");
+
+    try {
+      await emailjs.sendForm(serviceId, templateId, form.current, publicKey);
+      setStatus("success");
+      toast({
+        title: "Success!",
+        description: "Your message has been sent successfully.",
+      });
+      form.current.reset();
+    } catch (error) {
+      console.error("EmailJS error:", error);
+      setStatus("error");
+      toast({
+        title: "Error",
+        description: "Could not send message. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+        setTimeout(() => setStatus("idle"), 3000);
+    }
+  };
 
   return (
     <section id="contact" className="py-24 sm:py-32 relative overflow-hidden">
@@ -62,23 +81,23 @@ export default function Contact() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="p-8 bg-card/50 backdrop-blur-md border border-white/10 rounded-xl"
           >
-            <form action={dispatch} className="space-y-6">
+            <form ref={form} onSubmit={sendEmail} className="space-y-6">
               <div className="space-y-2">
-                <Label htmlFor="name">Name</Label>
-                <Input id="name" name="name" placeholder="Your Name" required />
-                {state.errors?.name && <p className="text-sm text-destructive">{state.errors.name[0]}</p>}
+                <Label htmlFor="user_name">Name</Label>
+                <Input id="user_name" name="user_name" placeholder="Your Name" required />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="email">Email</Label>
-                <Input id="email" name="email" type="email" placeholder="your@email.com" required />
-                 {state.errors?.email && <p className="text-sm text-destructive">{state.errors.email[0]}</p>}
+                <Label htmlFor="user_email">Email</Label>
+                <Input id="user_email" name="user_email" type="email" placeholder="your@email.com" required />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="message">Message</Label>
                 <Textarea id="message" name="message" placeholder="Your message..." rows={5} required />
-                 {state.errors?.message && <p className="text-sm text-destructive">{state.errors.message[0]}</p>}
               </div>
-              <SubmitButton />
+              <Button type="submit" size="lg" className="w-full font-bold" disabled={status === 'sending'}>
+                {status === 'sending' ? "Sending..." : "Send Message"}
+                <Send className="ml-2 h-4 w-4" />
+              </Button>
             </form>
           </motion.div>
           <motion.div
