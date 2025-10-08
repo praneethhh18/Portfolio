@@ -27,7 +27,7 @@
     {
       "id": "project-sar-ship",
       "description": "Project image for SAR Ship Detection",
-      "imageUrl": "https://picsum.photos/seed/sar-ship/600/400",
+      "imageUrl": "/ship.png",
       "imageHint": "satellite ship"
     },
     {
