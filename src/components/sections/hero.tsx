@@ -7,7 +7,6 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState, useRef } from "react";
 import SocialCard from "@/components/ui/social-card";
-import { textToSpeech } from "@/ai/flows/text-to-speech";
 
 const SUBTITLES = [
     "AI Architect",
@@ -18,8 +17,6 @@ const SUBTITLES = [
 export default function Hero() {
     const [subtitleIndex, setSubtitleIndex] = useState(0);
     const [isMounted, setIsMounted] = useState(false);
-    const [isPlaying, setIsPlaying] = useState(false);
-    const audioRef = useRef<HTMLAudioElement | null>(null);
 
     useEffect(() => {
         setIsMounted(true);
@@ -49,24 +46,6 @@ export default function Hero() {
         y.set(0);
     };
 
-    const handleAvatarHover = async () => {
-        if (isPlaying || (audioRef.current && !audioRef.current.paused)) return;
-        setIsPlaying(true);
-        try {
-            const { audio } = await textToSpeech({ text: "hello, welcome to praneeth p k portfolio" });
-            if (audioRef.current) {
-                audioRef.current.src = audio;
-                audioRef.current.play();
-            }
-        } catch (error) {
-            console.error("Error generating speech:", error);
-        } finally {
-            // A short delay before allowing another play to avoid spam
-            setTimeout(() => setIsPlaying(false), 1000);
-        }
-    };
-
-
   return (
     <section id="home" className="relative h-screen w-full flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0 animated-gradient" />
@@ -83,7 +62,6 @@ export default function Hero() {
             className="bg-card/30 backdrop-blur-lg p-8 rounded-2xl border border-white/10 shadow-2xl flex flex-col items-center text-center"
         >
             <motion.div 
-                onMouseEnter={handleAvatarHover}
                 className="w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-primary/50 shadow-lg cursor-pointer"
             >
                 <Image
@@ -129,7 +107,6 @@ export default function Hero() {
             </motion.div>
         </motion.div>
       </motion.div>
-      <audio ref={audioRef} onEnded={() => setIsPlaying(false)} />
     </section>
   );
 }
