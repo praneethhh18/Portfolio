@@ -25,7 +25,7 @@ export function Chatbot() {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 1,
-      text: "Hello! I'm Praneeth's AI assistant. How can I help you today? (Note: AI responses are currently mocked)",
+      text: "Hello! I'm Pran Ai, Praneeth's AI assistant. How can I help you today? (Note: AI responses are currently mocked)",
       sender: "bot",
     },
   ]);
@@ -73,7 +73,7 @@ export function Chatbot() {
       <SheetContent className="w-[400px] sm:w-[540px] bg-background p-0 flex flex-col">
         <SheetHeader className="p-6 border-b">
           <SheetTitle className="flex items-center gap-2">
-            <Bot /> AI Assistant
+            <Bot /> Pran Ai
           </SheetTitle>
         </SheetHeader>
         <div className="flex-1 overflow-y-auto p-6 space-y-4">
