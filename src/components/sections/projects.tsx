@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { PROJECTS } from "@/lib/data";
 import { ProjectCard } from "@/components/ui/project-card";
+import { GitHubConnectCard } from "@/components/ui/github-connect-card";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -33,7 +34,7 @@ export default function Projects() {
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 [grid-auto-rows:1fr]"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
@@ -42,6 +43,7 @@ export default function Projects() {
           {PROJECTS.map((project, index) => (
             <ProjectCard key={index} project={project} />
           ))}
+          <GitHubConnectCard />
         </motion.div>
       </div>
     </section>
