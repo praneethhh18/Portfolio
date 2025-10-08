@@ -67,9 +67,9 @@ export const PROJECTS = [
     githubUrl: "https://github.com/praneethhh18",
   },
   {
-    title: "ASE Shopping Cart Challenge",
-    description: "A responsive and feature-rich e-commerce interface developed as part of a competitive coding challenge, showcasing modern frontend development skills.",
-    tech: ["Web", "TypeScript", "React"],
+    title: "Fashion Aura",
+    description: "Fashion Aura – A modern, feature-rich e-commerce storefront designed to provide a seamless and intelligent shopping experience. (full stack)",
+    tech: ["Web", "TypeScript", "React", "Full Stack"],
     imageUrlId: "project-shopping-cart",
     githubUrl: "https://github.com/praneethhh18",
   },
