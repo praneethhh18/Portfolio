@@ -1,16 +1,12 @@
+
 "use client";
 
 import { motion, useMotionValue, useTransform, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { useEffect, useState } from "react";
 import SocialCard from "@/components/ui/social-card";
-
-const profileImage = PlaceHolderImages.find(
-  (img) => img.id === "profile-praneeth"
-);
 
 const SUBTITLES = [
     "AI Architect",
@@ -65,17 +61,14 @@ export default function Hero() {
             style={{ transformStyle: "preserve-3d", rotateX, rotateY, transform: "translateZ(20px)" }}
             className="w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-primary/50 shadow-2xl"
         >
-          {profileImage && (
             <Image
-              src={profileImage.imageUrl}
+              src="/me.jpg"
               alt="Praneeth P K"
               width={128}
               height={128}
               className="object-cover"
-              data-ai-hint={profileImage.imageHint}
               priority
             />
-          )}
         </motion.div>
         <motion.h1
           style={{ transformStyle: "preserve-3d", rotateX, rotateY, transform: "translateZ(50px)" }}
