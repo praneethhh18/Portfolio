@@ -54,7 +54,7 @@ export const PROJECTS = [
   },
   {
     title: "SAR Ship Detection",
-    description: "Automated ship identification system utilizing Synthetic Aperture Radar (SAR) imagery, enhancing maritime surveillance and security.",
+    description: "An advanced AI model designed to detect and localize ships in SAR imagery in real time using deep learning and image preprocessing techniques.",
     tech: ["Data Science", "Computer Vision", "Python"],
     imageUrlId: "project-sar-ship",
     githubUrl: "https://github.com/praneethhh18",
