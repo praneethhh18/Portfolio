@@ -8,6 +8,7 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Input } from "@/components/ui/input";
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { aiChatbotAssistant } from "@/ai/ai-chatbot-assistant";
 
 interface Message {
   id: number;
@@ -20,11 +21,12 @@ export function Chatbot() {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 1,
-      text: "Hello! I'm Pran Ai, Praneeth's AI assistant. How can I help you today? (Note: AI responses are currently mocked)",
+      text: "Hello! I'm Pran Ai, Praneeth's AI assistant. How can I help you today?",
       sender: "bot",
     },
   ]);
   const [inputValue, setInputValue] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const chatContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -33,9 +35,9 @@ export function Chatbot() {
     }
   }, [messages, isOpen]);
 
-  const handleSendMessage = (e: React.FormEvent) => {
+  const handleSendMessage = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!inputValue.trim()) return;
+    if (!inputValue.trim() || isLoading) return;
 
     const userMessage: Message = {
       id: Date.now(),
@@ -45,16 +47,27 @@ export function Chatbot() {
 
     setMessages((prev) => [...prev, userMessage]);
     setInputValue("");
+    setIsLoading(true);
 
-    // Mock bot response
-    setTimeout(() => {
+    try {
+      const { response } = await aiChatbotAssistant({ message: inputValue });
       const botResponse: Message = {
         id: Date.now() + 1,
-        text: "Thanks for your message! This is a demo interface. Praneeth will get back to you through his contact channels.",
+        text: response,
         sender: "bot",
       };
       setMessages((prev) => [...prev, botResponse]);
-    }, 1000);
+    } catch (error) {
+      console.error("AI Chatbot Error:", error);
+      const errorResponse: Message = {
+        id: Date.now() + 1,
+        text: "Sorry, I'm having a little trouble connecting right now. Please try again later.",
+        sender: "bot",
+      };
+      setMessages((prev) => [...prev, errorResponse]);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -123,6 +136,25 @@ export function Chatbot() {
                                 )}
                             </motion.div>
                         ))}
+                         {isLoading && (
+                            <motion.div
+                                layout
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                className="flex items-end gap-2 justify-start"
+                            >
+                                <Avatar className="h-8 w-8 self-start">
+                                    <AvatarFallback className="bg-primary text-primary-foreground"><Bot size={20} /></AvatarFallback>
+                                </Avatar>
+                                <div className="max-w-[80%] rounded-xl px-4 py-2.5 bg-secondary rounded-bl-none">
+                                    <div className="flex items-center gap-2">
+                                        <span className="dot-loader"></span>
+                                        <span className="dot-loader"></span>
+                                        <span className="dot-loader"></span>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        )}
                     </AnimatePresence>
                 </div>
 
@@ -133,8 +165,9 @@ export function Chatbot() {
                       onChange={(e) => setInputValue(e.target.value)}
                       placeholder="Type a message..."
                       className="flex-1 bg-background/50 border-white/20 focus:ring-primary"
+                      disabled={isLoading}
                     />
-                    <Button type="submit" size="icon" disabled={!inputValue.trim()} className="shrink-0">
+                    <Button type="submit" size="icon" disabled={!inputValue.trim() || isLoading} className="shrink-0">
                       <Send className="h-4 w-4" />
                       <span className="sr-only">Send</span>
                     </Button>
