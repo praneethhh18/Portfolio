@@ -67,13 +67,6 @@ export const PROJECTS = [
     imageUrlId: "project-shopping-cart",
     githubUrl: "https://github.com/praneethhh18",
   },
-  {
-    title: "Rocket Loader Animation",
-    description: "A fun and engaging loader animation built with React and Styled Components, featuring a cartoon moon and an orbiting rocket.",
-    tech: ["React", "Styled-Components"],
-    imageUrlId: "project-loader",
-    githubUrl: "https://github.com/praneethhh18",
-  },
 ];
 
 export const SKILLS = {
