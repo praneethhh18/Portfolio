@@ -77,8 +77,8 @@ export function ProjectCard({ project }: { project: Project }) {
         </div>
         <div className="p-6 flex flex-col flex-grow">
           <h3 className="text-xl font-bold font-headline mb-2">{project.title}</h3>
-          <p className="text-sm text-muted-foreground mb-4 min-h-[60px]">{project.description}</p>
-          <div className="flex flex-wrap gap-2 mt-auto">
+          <p className="text-sm text-muted-foreground mb-4 flex-grow">{project.description}</p>
+          <div className="flex flex-wrap gap-2">
             {project.tech.map((tag) => (
               <Badge key={tag} variant="secondary">{tag}</Badge>
             ))}
