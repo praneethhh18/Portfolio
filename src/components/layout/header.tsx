@@ -33,15 +33,15 @@ export default function Header() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className="fixed top-4 left-0 right-0 z-50 px-4"
+      className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-white/10"
     >
-      <div className="relative flex items-center justify-between h-16 px-6 max-w-5xl mx-auto rounded-2xl bg-card/50 backdrop-blur-lg border border-white/10 shadow-lg">
+      <div className="relative flex items-center justify-between h-16 px-6 max-w-7xl mx-auto">
         <a href="#home" className="text-lg font-headline font-bold text-primary flex-shrink-0">
           Praneeth.AI
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center gap-6">
+        <nav className="hidden md:flex items-center gap-8">
           {NAV_ITEMS.map((item) => (
             <NavLink key={item.name} href={item.href}>
               {item.name}

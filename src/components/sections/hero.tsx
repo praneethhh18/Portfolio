@@ -56,13 +56,13 @@ export default function Hero() {
       <div className="absolute inset-0 bg-background/70 backdrop-blur-sm" />
       
       <motion.div
-        style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
+        style={{ perspective: 1000 }}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
         className="relative flex flex-col items-center text-center p-4 z-10"
       >
         <motion.div 
-            style={{ transform: "translateZ(20px)" }}
+            style={{ transformStyle: "preserve-3d", rotateX, rotateY, transform: "translateZ(20px)" }}
             className="w-32 h-32 rounded-full overflow-hidden mb-6 border-4 border-primary/50 shadow-2xl"
         >
           {profileImage && (
@@ -78,13 +78,13 @@ export default function Hero() {
           )}
         </motion.div>
         <motion.h1
-          style={{ transform: "translateZ(50px)" }}
+          style={{ transformStyle: "preserve-3d", rotateX, rotateY, transform: "translateZ(50px)" }}
           className="text-4xl md:text-6xl font-headline font-bold bg-clip-text text-transparent bg-gradient-to-b from-foreground to-foreground/70"
         >
           Hi, I’m Praneeth P K
         </motion.h1>
         <motion.div
-          style={{ transform: "translateZ(40px)" }}
+          style={{ transformStyle: "preserve-3d", rotateX, rotateY, transform: "translateZ(40px)" }}
           className="mt-4 text-lg md:text-xl max-w-2xl text-foreground/80 h-8"
         >
           <AnimatePresence mode="wait">
@@ -102,7 +102,7 @@ export default function Hero() {
           </AnimatePresence>
         </motion.div>
         <motion.div
-          style={{ transform: "translateZ(30px)" }}
+          style={{ transformStyle: "preserve-3d", rotateX, rotateY, transform: "translateZ(30px)" }}
           className="mt-8 flex flex-col sm:flex-row gap-4 items-center"
         >
           <Button asChild size="lg" className="font-bold">
