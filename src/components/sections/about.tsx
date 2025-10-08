@@ -55,7 +55,6 @@ export default function About() {
                 fill
                 className="object-contain"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent" />
             </div>
           </motion.div>
 
