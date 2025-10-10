@@ -91,6 +91,9 @@ export default function About() {
                       {cert}
                     </Badge>
                   ))}
+                  <div className="w-full mt-4">
+                    <a href="/certifications" className="inline-block mt-2 rounded-md bg-primary px-4 py-2 text-white">View more</a>
+                  </div>
                 </div>
               </CardContent>
             </Card>
