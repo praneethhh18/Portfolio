@@ -20,8 +20,8 @@ export const CERTIFICATE_FILES: CertFile[] = [
     id: 'c2',
     title: 'IT Specialist - Artificial Intelligence',
     issuer: 'Certiport',
-    path: '/certs/artificial-intelligence.pdf',
-    type: 'pdf',
+    path: '/certs/Artificial-Intelligence-1.jpg',
+    type: 'image',
   },
   {
     id: 'c3',
