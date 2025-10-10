@@ -7,7 +7,7 @@ export default function CertificationsPage() {
       <Header />
       <main className="container mx-auto px-4 py-12">
         <h1 className="text-3xl font-bold mb-6">Certifications</h1>
-        <p className="mb-6">Upload or list your certificates (images or PDFs). Use public paths (e.g., /certs/your-file.pdf) or external URLs.</p>
+  <p className="mb-6">View my certifications below. Certificate files are served from <code>/certs/</code> (place images or PDFs in the project's <code>public/certs/</code> folder).</p>
         <CertificationsClient />
       </main>
     </div>
