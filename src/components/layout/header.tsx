@@ -12,6 +12,7 @@ const NAV_ITEMS = [
   { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
+  { name: "Certifications", href: "/certifications" },
   { name: "Services", href: "#services" },
 ];
 
@@ -60,7 +61,7 @@ export default function Header() {
       className="fixed top-6 left-0 right-0 z-50 flex justify-center"
     >
       <div className="bg-background/60 backdrop-blur-lg rounded-full shadow-lg border border-white/10 px-4 py-2 flex items-center gap-4">
-        <a href="#home" className="text-lg font-headline font-bold text-primary flex-shrink-0">
+        <a href="/" className="text-lg font-headline font-bold text-primary flex-shrink-0">
           Praneeth.Portfolio
         </a>
         <div className="h-6 w-px bg-white/10 hidden md:block" />
